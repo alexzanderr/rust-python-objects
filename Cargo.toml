@@ -1,0 +1,17 @@
+
+[package]
+name = "python-objects"
+version = "0.0.1"
+edition = "2021"
+description = "rust crate that implements the architecture of the CPython objects. with this crate you can crate a list with any data type from rust"
+authors = [ "alexzanderr <alexzander.dot.dev@gmail.com>" ]
+license = "MIT"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+[lib]
+name = "python"
