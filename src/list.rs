@@ -1,4 +1,42 @@
-
+//!
+//!
+//! docs
+//!
+//!
+//! ```rust
+//! let mut python_list =
+//!     List::from_string(String::from("123123"));
+//! python_list.append_int(123);
+//! python_list.append_float(123.123);
+//! python_list.append_float(123.123);
+//! python_list.append_float(123.123);
+//! python_list.append_string(String::from("asdasd"));
+//! python_list.append_list(
+//!     List::from_string("andrew".to_string()));
+//! python_list.append_pstring(
+//!     _String::from_string(
+//!         String::from("python string")));
+//! print(&python_list);
+//! print(len(&python_list));
+//! ```
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
+//!
 #![allow(
     dead_code,
     unused_imports,
@@ -27,13 +65,13 @@ use crate::_Object;
 // use object::Object;
 
 pub struct List {
-    _list: Vec<Object>
+    pub _list: Vec<Object>,
 }
 
 impl List {
     pub fn new() -> List {
         List {
-            _list: vec![]
+            _list: vec![],
         }
     }
 
@@ -45,13 +83,13 @@ impl List {
             temp_list.push(_object);
         }
         List {
-            _list: temp_list
+            _list: temp_list,
         }
     }
 
     pub fn from_int(_integer: i32) -> List {
         List {
-            _list: vec![Object::Int(Int::new(_integer))]
+            _list: vec![Object::Int(Int::new(_integer))],
         }
     }
 
@@ -61,7 +99,7 @@ impl List {
             .map(|o| Object::Char(Char::new(o)))
             .collect();
         List {
-            _list
+            _list,
         }
     }
 
@@ -161,3 +199,19 @@ impl Display for List {
         write!(f, "]")
     }
 }
+
+
+// impl Iterator for List {
+//     type Item = Object;
+//     fn next(&mut self) -> Option<Self::Item> {
+//         if self.iter_index >= self._list.len() {
+//             // Obviously, there isn't any more data to read so let's stop here.
+//             None
+//         } else {
+//             // We increment the position of our iterator.
+//             self.iter_index += 1;
+//             // We return the current value pointed by our iterator.
+//             // self._list.get(self.iter_index - 1)
+//         }
+//     }
+// }
