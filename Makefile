@@ -27,3 +27,13 @@ t:
 # make test
 test:
 	cargo test -- --show-output
+
+
+# make p
+p:
+	# for publishing to crates.io
+	cargo build --release
+	cargo run --release
+	cargo doc
+	cargo test
+	cargo publish

@@ -4,6 +4,7 @@
 //!
 //!
 //! ```rust
+//! use python::*;
 //! let mut python_list =
 //!     List::from_string(String::from("123123"));
 //! python_list.append_int(123);
@@ -37,6 +38,8 @@
 //!
 //!
 //!
+
+
 #![allow(
     dead_code,
     unused_imports,
