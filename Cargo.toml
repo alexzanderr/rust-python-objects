@@ -6,19 +6,28 @@ edition = "2021"
 description = "rust crate that implements the architecture of the CPython objects. with this crate you can crate a list with any data type from rust"
 authors = [ "alexzanderr <alexzander.dot.dev@gmail.com>" ]
 license = "MIT"
-license-file = "LICENSE"
+# license-file = "LICENSE"
 homepage = "https://github.com/alexzanderr/rust-python-objects"
 repository = "https://github.com/alexzanderr/rust-python-objects"
 documentation = "https://docs.rs/rust-python-objects"
 readme = "README.md"
 keywords = ["python", "objects", "python-objects"]
-categories = ["python"]
+
+# use this
+# https://crates.io/category_slugs
+categories = ["python"] # this is invalid
 
 [dependencies]
+unicode-segmentation = "1.9.0"
+color-backtrace = "0.5.1"
 
 
 [lib]
 name = "python"
+
+[dev-dependencies]
+pretty_assertions = "1.1.0"
+doc-comment = "0.3.3"
 
 
 

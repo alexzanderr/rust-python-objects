@@ -37,3 +37,8 @@ p:
 	cargo doc
 	cargo test
 	cargo publish
+
+
+# make d
+d:
+	cargo doc --open --document-private-items

@@ -1,13 +1,19 @@
 
+#![doc = include_str!("../docs/python.md")]
+#![doc = include_str!("../docs/python_list.md")]
 
-mod int;
-mod float;
-mod string;
-mod character;
-mod object;
-mod list;
-mod dict;
-mod builtins;
+#![warn(missing_docs)]
+
+
+
+pub mod int;
+pub mod float;
+pub mod string;
+pub mod character;
+pub mod object;
+pub mod list;
+pub mod dict;
+pub mod builtins;
 
 pub use int::Int;
 pub use float::Float;
@@ -17,7 +23,6 @@ pub use list::List;
 pub use object::Object;
 pub use object::_Object;
 pub use dict::Dict;
-
 pub use builtins::print;
 pub use builtins::len;
 pub use builtins::repr;

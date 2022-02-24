@@ -1,43 +1,7 @@
-//!
-//!
-//! docs
-//!
-//!
-//! ```rust
-//! use python::*;
-//! let mut python_list =
-//!     List::from_string(String::from("123123"));
-//! python_list.append_int(123);
-//! python_list.append_float(123.123);
-//! python_list.append_float(123.123);
-//! python_list.append_float(123.123);
-//! python_list.append_string(String::from("asdasd"));
-//! python_list.append_list(
-//!     List::from_string("andrew".to_string()));
-//! python_list.append_pstring(
-//!     _String::from_string(
-//!         String::from("python string")));
-//! print(&python_list);
-//! print(len(&python_list));
-//! ```
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
-//!
+//! NOT VISIBLE TO THE docs.rs
+//! this is only for lib.rs
+//! it wasnt visible because this module somehow was private
+//! now its visible
 
 
 #![allow(
@@ -67,11 +31,24 @@ use crate::_Object;
 // mod object;
 // use object::Object;
 
+/// the main component
+///
+/// contens structure of good docs
+/// [short sentence explaining what it is]
+///
+/// [more detailed explanation]
+///
+/// [at least one code example that users can copy/paste to try it]
+///
+/// [even more advanced explanations if necessary]
 pub struct List {
     pub _list: Vec<Object>,
 }
 
+
+/// its implementation
 impl List {
+    /// new function
     pub fn new() -> List {
         List {
             _list: vec![],
@@ -90,6 +67,8 @@ impl List {
         }
     }
 
+    // include markdown file as doc comment for this function
+    #[doc = include_str!("../docs/python_list.md")]
     pub fn from_int(_integer: i32) -> List {
         List {
             _list: vec![Object::Int(Int::new(_integer))],
@@ -204,17 +183,3 @@ impl Display for List {
 }
 
 
-// impl Iterator for List {
-//     type Item = Object;
-//     fn next(&mut self) -> Option<Self::Item> {
-//         if self.iter_index >= self._list.len() {
-//             // Obviously, there isn't any more data to read so let's stop here.
-//             None
-//         } else {
-//             // We increment the position of our iterator.
-//             self.iter_index += 1;
-//             // We return the current value pointed by our iterator.
-//             // self._list.get(self.iter_index - 1)
-//         }
-//     }
-// }
