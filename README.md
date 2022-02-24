@@ -5,12 +5,6 @@
     <a href="https://choosealicense.com/licenses/mit/" alt="License: MIT">
         <img src="https://img.shields.io/badge/license-MIT-green.svg" />
     </a>
-    <a href="https://choosealicense.com/licenses/mit/" alt="License: MIT">
-        <img src="https://github.com/alexzanderr/rust-python-objects/blob/main/static/img/coverage/coverage.svg?raw=True">
-    </a>
-    <a href="https://choosealicense.com/licenses/mit/" alt="License: MIT">
-        <img src="https://github.com/alexzanderr/rust-python-objects/blob/main/static/img/coverage/docstr.svg?raw=True">
-    </a>
 </p>
 
 
