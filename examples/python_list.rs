@@ -63,6 +63,7 @@ fn main() {
     python_list.append_float(123.123);
     python_list.append_float(123.123);
     python_list.append_string(String::from("asdasd"));
+
     python_list.append_list(
         List::from_string("andrew".to_string()));
     python_list.append_pstring(
@@ -75,6 +76,11 @@ fn main() {
 
     print(&python_list);
     print(len(&python_list));
+
+
+    for o in python_list.iter() {
+        print(o)
+    }
 
 
     // let oo = Object::Int(Int::new(123));

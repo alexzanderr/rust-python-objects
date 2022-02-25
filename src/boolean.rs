@@ -11,6 +11,7 @@ use crate::_Object;
 
 
 /// Bool structure for True and False
+#[derive(Copy, Clone)]
 pub struct Bool {
     _bool: bool
 }

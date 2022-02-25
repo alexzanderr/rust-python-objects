@@ -19,6 +19,7 @@
 use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
+use std::ops::Deref;
 
 use crate::_Object;
 use crate::Object;
@@ -42,6 +43,7 @@ use crate::Bool;
 /// [at least one code example that users can copy/paste to try it]
 ///
 /// [even more advanced explanations if necessary]
+// #[derive(Copy, Clone)]
 pub struct List {
     /// _list which holds all the python objects together
     pub _list: Vec<Object>,
@@ -201,4 +203,18 @@ impl Display for List {
     }
 }
 
+///
+///
+///
+impl Deref for List {
+    type Target = Vec<Object>;
 
+
+    /// usage
+    /// for o in python_list.iter() {
+    ///     print(o)
+    /// }
+    fn deref(&self) -> &Self::Target {
+        &self._list
+    }
+}

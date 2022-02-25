@@ -4,6 +4,7 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
 
+#[derive(Copy, Clone)]
 pub struct Float {
     _float: f32
 }

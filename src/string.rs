@@ -1,11 +1,12 @@
 use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
-use std::ops::Index;
+// use std::ops::Index;
 use std::str::Chars;
 
 use crate::_Object;
 
+#[derive(Clone)]
 pub struct _String {
     _string: String,
 }

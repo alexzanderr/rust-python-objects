@@ -9,6 +9,7 @@ use std::fmt::Result;
 use crate::_Object;
 
 /// Int struct, holds and _integer: i32
+#[derive(Copy, Clone)]
 pub struct Int {
     _integer: i32
 }
