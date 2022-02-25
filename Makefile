@@ -33,7 +33,7 @@ test:
 p:
 	# for publishing to crates.io
 	cargo build --release
-	cargo run --release
+ 	# cargo run --release
 	cargo doc
 	cargo test
 	cargo publish
