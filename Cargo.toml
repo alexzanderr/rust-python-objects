@@ -15,7 +15,7 @@ keywords = ["python", "objects", "python-objects"]
 
 # use this
 # https://crates.io/category_slugs
-categories = ["python"] # this is invalid
+categories = ["data-structures"]
 
 [dependencies]
 unicode-segmentation = "1.9.0"
