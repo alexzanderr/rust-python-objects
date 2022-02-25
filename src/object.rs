@@ -1,26 +1,22 @@
 
+// std imports
 use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
 
-// mod int;
-// mod float;
-// mod string;
-// mod _char;
-// mod object;
-// mod list;
-
+// crate imports
 use crate::List;
 use crate::Int;
 use crate::Float;
 use crate::_String;
 use crate::Char;
+use crate::Bool;
 
 
 pub trait _Object {
-    // fn __str__(&self) -> {}
     fn __repr__(&self) -> String;
     fn __len__(&self) -> usize;
+    fn __str__(&self) -> String;
 }
 
 
@@ -38,6 +34,7 @@ pub enum Object {
     Float(Float),
     String(_String),
     List(List),
+    Bool(Bool),
 }
 
 
@@ -51,6 +48,7 @@ impl Display for Object {
             Object::Float(_float) => write!(f, "{}", _float),
             Object::String(_string) => write!(f, "{}", _string),
             Object::List(_list) => write!(f, "{}", _list),
+            Object::Bool(_bool) => write!(f, "{}", _bool),
             // _ => Ok(())
         }
     }

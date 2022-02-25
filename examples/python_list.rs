@@ -20,6 +20,7 @@ use python::List;
 use python::Object;
 use python::Int;
 use python::Float;
+use python::Bool;
 use python::_String;
 
 // builtins
@@ -67,6 +68,11 @@ fn main() {
     python_list.append_pstring(
         _String::from_string(
             String::from("python string")));
+
+    python_list.append_pbool(Bool::new(true));
+    python_list.append_pbool(Bool::new(false));
+    python_list.append_bool(false);
+
     print(&python_list);
     print(len(&python_list));
 

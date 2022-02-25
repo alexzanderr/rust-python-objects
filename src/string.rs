@@ -52,6 +52,10 @@ impl _Object for _String {
     fn __repr__(&self) -> String {
         format!("'{}'", self._string)
     }
+
+    fn __str__(&self) -> String {
+        self._string.clone()
+    }
 }
 
 impl Display for _String {

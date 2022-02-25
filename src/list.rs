@@ -20,12 +20,13 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
 
+use crate::_Object;
+use crate::Object;
 use crate::Int;
 use crate::Float;
 use crate::_String;
 use crate::Char;
-use crate::Object;
-use crate::_Object;
+use crate::Bool;
 
 
 // mod object;
@@ -42,6 +43,7 @@ use crate::_Object;
 ///
 /// [even more advanced explanations if necessary]
 pub struct List {
+    /// _list which holds all the python objects together
     pub _list: Vec<Object>,
 }
 
@@ -57,6 +59,8 @@ impl List {
 
     // TODO
     // make an iterator for List and extract object from it
+
+    /// creates a list from another list; like copy constructor
     pub fn from_list(_list: List) -> List {
         let mut temp_list: Vec<Object> = vec![];
         for _object in _list._list {
@@ -68,13 +72,19 @@ impl List {
     }
 
     // include markdown file as doc comment for this function
-    #[doc = include_str!("../docs/python_list.md")]
+    #[doc = include_str!("../docs/python_list/showcase.md")]
     pub fn from_int(_integer: i32) -> List {
         List {
             _list: vec![Object::Int(Int::new(_integer))],
         }
     }
 
+
+    /// creates a list from string
+    /// example
+    /// let list = List::from_string("q23123123".to_string())
+    /// or
+    /// let list = List::from_string(String::from("q23123123"))
     pub fn from_string(_string: String) -> List {
         let mut _list: Vec<Object> =
             _string.chars()
@@ -128,14 +138,19 @@ impl List {
         self
     }
 
-    pub fn append_object(&mut self, _object: Object) -> &mut Self {
-        self._list.push(_object);
+    pub fn append_list(&mut self, _list: List) -> &mut Self {
+        self._list.push(Object::List(_list));
         self
     }
 
-    pub fn append_list(&mut self, _list: List) -> &mut Self {
+    pub fn append_bool(&mut self, _bool: bool) ->&mut Self {
+        self._list.push(Object::Bool(Bool::new(_bool)));
+        self
+    }
 
-        self._list.push(Object::List(_list));
+    #[doc = include_str!("../docs/python_list/append_pbool.md")]
+    pub fn append_pbool(&mut self, _bool: Bool) ->&mut Self {
+        self._list.push(Object::Bool(_bool));
         self
     }
 }
@@ -146,6 +161,10 @@ impl _Object for List {
     }
 
     fn __repr__(&self) -> String {
+        String::from("unimplemented")
+    }
+
+    fn __str__(&self) -> String {
         String::from("unimplemented")
     }
 }

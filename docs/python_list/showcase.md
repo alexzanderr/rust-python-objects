@@ -7,6 +7,8 @@
 // but the lib.rs (library crate of this crate) its called `python`
 // so you can import like this
 extern crate python;
+// actually 'extern crate' is useless
+// just use only 'use python::'
 
 // use everything from python
 use python::*;

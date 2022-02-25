@@ -5,6 +5,8 @@ use pretty_assertions::assert_eq;
 // crate
 use python::print;
 use python::List;
+use python::len;
+use python::repr;
 
 
 #[test]
@@ -32,4 +34,13 @@ fn test_append_int() {
 #[test]
 fn test_pretty() {
     assert_eq!(5, 5);
+}
+
+#[test]
+fn test_len() {
+    let mut python_list = List::new();
+    python_list.append_bool(true);
+    python_list.append_bool(false);
+    let result = len(&python_list);
+    assert_eq!(result, 2)
 }
