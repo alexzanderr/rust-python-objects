@@ -16,6 +16,8 @@
 )]
 
 
+use std::collections::VecDeque;
+use std::collections::vec_deque;
 use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
@@ -33,6 +35,20 @@ use crate::Bool;
 // mod object;
 // use object::Object;
 
+/// append function for List
+/// can append any data type
+pub trait Append<T>: Sized {
+    /// Performs append
+    fn append(&mut self, _: T) -> &mut Self;
+}
+
+/// appends to front of the list
+/// meaning: list.insert(o, item)
+pub trait AppendFront<T>: Sized {
+    /// performs the append front
+    fn append_front(&mut self, _: T) -> &mut Self;
+}
+
 /// the main component
 ///
 /// contens structure of good docs
@@ -46,7 +62,7 @@ use crate::Bool;
 // #[derive(Copy, Clone)]
 pub struct List {
     /// _list which holds all the python objects together
-    pub _list: Vec<Object>,
+    pub _list: VecDeque<Object>,
 }
 
 
@@ -55,104 +71,161 @@ impl List {
     /// new function
     pub fn new() -> List {
         List {
-            _list: vec![],
+            _list: VecDeque::new(),
         }
     }
 
     // TODO
     // make an iterator for List and extract object from it
-
-    /// creates a list from another list; like copy constructor
-    pub fn from_list(_list: List) -> List {
-        let mut temp_list: Vec<Object> = vec![];
-        for _object in _list._list {
-            temp_list.push(_object);
-        }
-        List {
-            _list: temp_list,
-        }
-    }
-
-    // include markdown file as doc comment for this function
-    #[doc = include_str!("../docs/python_list/showcase.md")]
-    pub fn from_int(_integer: i32) -> List {
-        List {
-            _list: vec![Object::Int(Int::new(_integer))],
-        }
-    }
+}
 
 
-    /// creates a list from string
-    /// example
-    /// let list = List::from_string("q23123123".to_string())
-    /// or
-    /// let list = List::from_string(String::from("q23123123"))
-    pub fn from_string(_string: String) -> List {
-        let mut _list: Vec<Object> =
-            _string.chars()
-            .map(|o| Object::Char(Char::new(o)))
-            .collect();
-        List {
-            _list,
-        }
-    }
-
-
-
-    /// inline append for integer
-    /// example
-    ///
-    /// let mut one_elem = List::new();
-    /// one_elem
-    ///     .append_int(123)
-    ///     .append_int(123)
-    ///     .append_int(123)
-    ///     .append_int(123)
-    ///     .append_int(123)
-    ///     .append_int(123)
-    ///     .append_int(123);
-    /// println!("{}", one_elem);
-    ///
-    /// [123, 123, 123, 123, 123, 123, 123]
-    ///
-    pub fn append_int(&mut self, _integer: i32) -> &mut Self {
-        self._list.push(Object::Int(Int::new(_integer)));
+/// inline append for integer
+/// example
+///
+/// let mut one_elem = List::new();
+/// one_elem
+///     .append_int(123)
+///     .append_int(123)
+///     .append_int(123)
+///     .append_int(123)
+///     .append_int(123)
+///     .append_int(123)
+///     .append_int(123);
+/// println!("{}", one_elem);
+///
+/// [123, 123, 123, 123, 123, 123, 123]
+///
+impl Append<i32> for List {
+    fn append(&mut self, _integer: i32) -> &mut Self {
+        self._list.push_back(Object::Int(Int::new(_integer)));
         self
     }
+}
 
-    pub fn append_char(&mut self, _char: char) -> &mut Self {
-        self._list.push(Object::Char(Char::new(_char)));
+impl Append<char> for List {
+    fn append(&mut self, _char: char) -> &mut Self {
+        self._list.push_back(Object::Char(Char::new(_char)));
         self
     }
+}
 
-    pub fn append_float(&mut self, _float: f32) -> &mut Self {
-        self._list.push(Object::Float(Float::new(_float)));
+impl Append<f32> for List {
+    fn append(&mut self, _float: f32) -> &mut Self {
+        self._list.push_back(Object::Float(Float::new(_float)));
         self
     }
+}
 
-    pub fn append_string(&mut self, string: String) -> &mut Self {
-        self._list.push(Object::String(_String::from_string(string)));
+
+impl Append<String> for List {
+    fn append(&mut self, string: String) -> &mut Self {
+        self._list.push_back(Object::String(_String::from_string(string)));
         self
     }
+}
 
-    pub fn append_pstring(&mut self, _string: _String) -> &mut Self {
-        self._list.push(Object::String(_string));
+impl Append<_String> for List {
+    fn append(&mut self, _string: _String) -> &mut Self {
+        self._list.push_back(Object::String(_string));
         self
     }
+}
 
-    pub fn append_list(&mut self, _list: List) -> &mut Self {
-        self._list.push(Object::List(_list));
+impl Append<bool> for List {
+    fn append(&mut self, _bool: bool) ->&mut Self {
+        self._list.push_back(Object::Bool(Bool::new(_bool)));
         self
     }
+}
 
-    pub fn append_bool(&mut self, _bool: bool) ->&mut Self {
-        self._list.push(Object::Bool(Bool::new(_bool)));
-        self
-    }
+
+impl Append<Bool> for List {
 
     #[doc = include_str!("../docs/python_list/append_pbool.md")]
-    pub fn append_pbool(&mut self, _bool: Bool) ->&mut Self {
-        self._list.push(Object::Bool(_bool));
+    fn append(&mut self, _bool: Bool) ->&mut Self {
+        self._list.push_back(Object::Bool(_bool));
+        self
+    }
+}
+
+impl Append<List> for List {
+    fn append(&mut self, _list: List) -> &mut Self {
+        self._list.push_back(Object::List(_list));
+        self
+    }
+}
+
+
+
+
+impl AppendFront<i32> for List {
+    fn append_front(&mut self, _integer: i32) -> &mut Self {
+        self._list.push_front(Object::Int(Int::new(_integer)));
+        self
+    }
+}
+
+
+impl AppendFront<&str> for List {
+    fn append_front(
+        &mut self,
+        _static_string: &str
+    ) -> &mut Self {
+        self._list.push_front(Object::String(_String::from_str(_static_string)));
+        self
+    }
+}
+
+impl AppendFront<char> for List {
+    fn append_front(&mut self, _char: char) -> &mut Self {
+        self._list.push_front(Object::Char(Char::new(_char)));
+        self
+    }
+}
+
+impl AppendFront<f32> for List {
+    fn append_front(&mut self, _float: f32) -> &mut Self {
+        self._list.push_front(Object::Float(Float::new(_float)));
+        self
+    }
+}
+
+
+impl AppendFront<String> for List {
+    fn append_front(&mut self, string: String) -> &mut Self {
+        self._list.push_front(Object::String(_String::from_string(string)));
+        self
+    }
+}
+
+impl AppendFront<_String> for List {
+    fn append_front(&mut self, _string: _String) -> &mut Self {
+        self._list.push_front(Object::String(_string));
+        self
+    }
+}
+
+impl AppendFront<bool> for List {
+    fn append_front(&mut self, _bool: bool) ->&mut Self {
+        self._list.push_front(Object::Bool(Bool::new(_bool)));
+        self
+    }
+}
+
+
+impl AppendFront<Bool> for List {
+
+    #[doc = include_str!("../docs/python_list/append_pbool.md")]
+    fn append_front(&mut self, _bool: Bool) ->&mut Self {
+        self._list.push_front(Object::Bool(_bool));
+        self
+    }
+}
+
+impl AppendFront<List> for List {
+    fn append_front(&mut self, _list: List) -> &mut Self {
+        self._list.push_front(Object::List(_list));
         self
     }
 }
@@ -207,7 +280,7 @@ impl Display for List {
 ///
 ///
 impl Deref for List {
-    type Target = Vec<Object>;
+    type Target = VecDeque<Object>;
 
 
     /// usage
@@ -216,5 +289,71 @@ impl Deref for List {
     /// }
     fn deref(&self) -> &Self::Target {
         &self._list
+    }
+}
+
+
+impl From<&str> for List {
+    fn from(_static_string: &str) -> List {
+        List {
+            _list:
+                _static_string.chars()
+                .map(|c| Object::Char(Char::new(c)))
+                .collect()
+        }
+    }
+}
+
+/// creates a list from string
+/// example
+/// let list = List::from("q23123123".to_string())
+/// or
+/// let list = List::from(String::from("q23123123"))
+impl From<&String> for List {
+    fn from(_string: &String) -> List {
+        List {
+            _list:
+                _string.chars()
+                .map(|c| Object::Char(Char::new(c)))
+                .collect()
+        }
+    }
+}
+
+impl From<String> for List {
+    fn from(_string: String) -> List {
+        List {
+            _list:
+                _string.chars()
+                .map(|c| Object::Char(Char::new(c)))
+                .collect()
+        }
+    }
+}
+
+impl From<i32> for List {
+
+    // include markdown file as doc comment for this function
+    #[doc = include_str!("../docs/python_list/showcase.md")]
+    fn from(_integer: i32) -> List {
+        let mut vector_deque = VecDeque::new();
+        vector_deque.push_back(Object::Int(Int::new(_integer)));
+        List {
+            _list: vector_deque,
+        }
+    }
+}
+
+
+impl From<&List> for List {
+    /// creates a list from another list; like copy constructor
+    fn from(_list: &List) -> List {
+        let mut temp_list: VecDeque<Object> = VecDeque::new();
+        for _object in &_list._list {
+            // temp_list.push_back(_object);
+        }
+        List {
+            _list: temp_list,
+        }
     }
 }

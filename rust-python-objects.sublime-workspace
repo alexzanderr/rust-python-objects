@@ -1,0 +1,2331 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"exce",
+				"\"folder_exclude_patterns\""
+			],
+			[
+				"String",
+				"StringResult"
+			],
+			[
+				"Font",
+				"FontNotFoundError"
+			],
+			[
+				"read",
+				"read_to_string"
+			],
+			[
+				"te",
+				"templates"
+			],
+			[
+				"print",
+				"println!"
+			],
+			[
+				"string",
+				"string_buffer"
+			],
+			[
+				"ok",
+				"ok"
+			],
+			[
+				"sta",
+				"starts_with"
+			],
+			[
+				"d",
+				"dbg!"
+			],
+			[
+				"printl",
+				"println!"
+			],
+			[
+				"macro",
+				"macro_rules"
+			],
+			[
+				"tur",
+				"turtle"
+			],
+			[
+				"prinln",
+				"println"
+			],
+			[
+				"List",
+				"ListIterator"
+			],
+			[
+				"pthon",
+				"python_list"
+			],
+			[
+				"Iter",
+				"Iterator"
+			],
+			[
+				"p",
+				"pretty_assertions"
+			],
+			[
+				"assert",
+				"assert_eq"
+			],
+			[
+				"include",
+				"include_str!"
+			],
+			[
+				"python",
+				"python_list"
+			],
+			[
+				"ap",
+				"append_bool"
+			],
+			[
+				"apppe",
+				"append_pbool"
+			],
+			[
+				"append",
+				"append_pbool"
+			],
+			[
+				"to",
+				"to_digit"
+			],
+			[
+				"to_",
+				"to_string"
+			],
+			[
+				"int",
+				"_integer"
+			],
+			[
+				"from",
+				"from_string"
+			],
+			[
+				"appe",
+				"append_string"
+			],
+			[
+				"_",
+				"__len__"
+			],
+			[
+				"pointe",
+				"pointer_to_one_elem"
+			],
+			[
+				"pr",
+				"println!"
+			],
+			[
+				"write",
+				"writeln!"
+			],
+			[
+				"le",
+				"len"
+			],
+			[
+				"allow",
+				"allow_everything"
+			],
+			[
+				"Hash",
+				"HashMap"
+			],
+			[
+				"unwrap",
+				"unwrap_or_else"
+			],
+			[
+				"parse",
+				"parse_arguments"
+			],
+			[
+				"split",
+				"split_off"
+			],
+			[
+				"ex",
+				"\"folder_exclude_patterns\""
+			],
+			[
+				"private",
+				"private_function"
+			],
+			[
+				"pri",
+				"private_function"
+			],
+			[
+				"rust",
+				"rust_core"
+			],
+			[
+				"asert",
+				"assert_eq!"
+			],
+			[
+				"should",
+				"should_panic"
+			],
+			[
+				"sho",
+				"should_panic"
+			],
+			[
+				"add",
+				"adder"
+			],
+			[
+				"Par",
+				"PartialEq"
+			],
+			[
+				"example",
+				"example_code"
+			],
+			[
+				"exmapl",
+				"example_code"
+			],
+			[
+				"or",
+				"or_default"
+			],
+			[
+				"enu",
+				"enumerate"
+			],
+			[
+				"init",
+				"initial_scores"
+			],
+			[
+				"into",
+				"into_iter"
+			],
+			[
+				"Inhe",
+				"InheritFrom"
+			],
+			[
+				"Obje",
+				"Object"
+			],
+			[
+				"allo",
+				"allow_everything"
+			],
+			[
+				"rst",
+				"rstest"
+			],
+			[
+				"expec",
+				"expect"
+			],
+			[
+				"asser",
+				"assert_eq"
+			],
+			[
+				"algo",
+				"algorithms"
+			],
+			[
+				"target",
+				"target_sum"
+			],
+			[
+				"front",
+				"front_of_house"
+			],
+			[
+				"Ip",
+				"IpAddrKind"
+			],
+			[
+				"exitcode",
+				"exit_code"
+			],
+			[
+				"Exit",
+				"ExitStatus"
+			],
+			[
+				"exit",
+				"ExitStatus"
+			],
+			[
+				"exi",
+				"exit_status"
+			],
+			[
+				"insta",
+				"install"
+			],
+			[
+				"color",
+				"color_backtrace"
+			],
+			[
+				"std",
+				"stderr_str"
+			],
+			[
+				"out",
+				"out_and_err"
+			],
+			[
+				"print_python",
+				"print_python_macro"
+			],
+			[
+				"Dis",
+				"Display"
+			],
+			[
+				"sign",
+				"sign_in_count"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"Format",
+				"Formatter"
+			],
+			[
+				"al",
+				"algorithms"
+			],
+			[
+				"ten",
+				"ten_to_minus_9"
+			],
+			[
+				"minu",
+				"minus_ten_to_minus_9"
+			],
+			[
+				"panic",
+				"panic!"
+			],
+			[
+				"po",
+				"pow"
+			],
+			[
+				"unwra",
+				"unwrap"
+			],
+			[
+				"pos",
+				"pos_table"
+			],
+			[
+				"get",
+				"get_key_value"
+			],
+			[
+				"con",
+				"contains_key"
+			],
+			[
+				"inte",
+				"integer"
+			],
+			[
+				"appen",
+				"append"
+			],
+			[
+				"push",
+				"push_str"
+			],
+			[
+				"println",
+				"println"
+			],
+			[
+				"close",
+				"closure"
+			],
+			[
+				"Point2",
+				"Point2D"
+			],
+			[
+				"move",
+				"move_right"
+			],
+			[
+				"un",
+				"unwrap_or"
+			],
+			[
+				"load_the",
+				"load_theme_from_file"
+			],
+			[
+				"The",
+				"ThemeSet"
+			],
+			[
+				"pat",
+				"path"
+			],
+			[
+				"ar",
+				"args"
+			],
+			[
+				"unrea",
+				"unreachable_code"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"lines",
+				"lines_string"
+			],
+			[
+				"str",
+				"as_str"
+			],
+			[
+				"read_conte",
+				"read_contents_from_file"
+			],
+			[
+				"dot",
+				"dot_method"
+			],
+			[
+				"old",
+				"old_enough"
+			],
+			[
+				"muta",
+				"mutable"
+			],
+			[
+				"opt",
+				"Option"
+			],
+			[
+				"const",
+				"const"
+			],
+			[
+				"_has",
+				"_hashinside"
+			],
+			[
+				"unra",
+				"unwrap"
+			],
+			[
+				"Has",
+				"HashMap"
+			],
+			[
+				"secre",
+				"secret_number"
+			],
+			[
+				"unuse",
+				"unused_imports"
+			],
+			[
+				"iter",
+				"iter"
+			],
+			[
+				"secret",
+				"secret_number"
+			],
+			[
+				"key",
+				"get_key_value"
+			],
+			[
+				"inser",
+				"try_insert"
+			],
+			[
+				"unsed",
+				"unused"
+			],
+			[
+				"Pylist",
+				"PylistObject"
+			],
+			[
+				"PyList",
+				"PyList"
+			],
+			[
+				"py",
+				"pyfunction"
+			],
+			[
+				"float",
+				"float32"
+			],
+			[
+				"type",
+				"types"
+			],
+			[
+				"ji",
+				"generated_jit"
+			],
+			[
+				"ty",
+				"types"
+			],
+			[
+				"exc",
+				"exc_type"
+			],
+			[
+				"raport",
+				"raport_M1"
+			],
+			[
+				"len",
+				"seq_len"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "rust-python-objects.sublime-project",
+			"settings":
+			{
+				"buffer_size": 95,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAACMAAAAAAAAAJAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIwAAAAAAAAAjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAACQAAAAAAAAAJQAAAAAAAAAAAAAAJQAAAAAAAAAoAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"lsp_json_auto_complete",
+					null,
+					"AQAAACgAAAAAAAAAKgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKAAAAAAAAAAoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": "exce"
+					},
+					"BAAAACkAAAAAAAAAKgAAAAAAAAAAAAAAKgAAAAAAAAArAAAAAAAAAAAAAAArAAAAAAAAACwAAAAAAAAAAAAAACwAAAAAAAAALQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKQAAAAAAAAApAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion_item {\"session_name\":\"LSP-json\",\"item\":{\"insertText\":\"\\\"folder_exclude_patterns\\\": [$1]\",\"documentation\":{\"kind\":\"markdown\",\"value\":\"[Patterns](http://www.sublimetext.com/docs/file_patterns.html) of folders to exclude from the folder. This is added to the global setting of the same name. This is checked after `\\\"folder_include_patterns\\\"`.\"},\"textEdit\":{\"newText\":\"\\\"folder_exclude_patterns\\\": [$1]\",\"range\":{\"end\":{\"character\":5,\"line\":5},\"start\":{\"character\":3,\"line\":5}}},\"label\":\"folder_exclude_patterns\",\"insertTextFormat\":2,\"filterText\":\"\\\"folder_exclude_patterns\\\"\",\"kind\":10}}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": false,
+						"query_change_id":
+						[
+							4,
+							9,
+							1
+						],
+						"trigger": "\"folder_exclude_patterns\""
+					},
+					"BgAAACwAAAAAAAAALAAAAAAAAAABAAAAZSsAAAAAAAAAKwAAAAAAAAABAAAAYyoAAAAAAAAAKgAAAAAAAAABAAAAeCkAAAAAAAAAKQAAAAAAAAABAAAAZSgAAAAAAAAAKAAAAAAAAAACAAAAIiIoAAAAAAAAAEUAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALQAAAAAAAAAtAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\n\t$0\n"
+					},
+					"AQAAAEQAAAAAAAAATQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"lsp_json_auto_complete",
+					null,
+					"AQAAAEkAAAAAAAAASwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASQAAAAAAAABJAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "taqr"
+					},
+					"BAAAAEoAAAAAAAAASwAAAAAAAAAAAAAASwAAAAAAAABMAAAAAAAAAAAAAABMAAAAAAAAAE0AAAAAAAAAAAAAAE0AAAAAAAAATgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASgAAAAAAAABKAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					2,
+					"left_delete",
+					null,
+					"AgAAAE0AAAAAAAAATQAAAAAAAAABAAAAckwAAAAAAAAATAAAAAAAAAABAAAAcQ",
+					"AQAAAAAAAAABAAAATgAAAAAAAABOAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"insert",
+					{
+						"characters": "rget"
+					},
+					"BAAAAEwAAAAAAAAATQAAAAAAAAAAAAAATQAAAAAAAABOAAAAAAAAAAAAAABOAAAAAAAAAE8AAAAAAAAAAAAAAE8AAAAAAAAAUAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATAAAAAAAAABMAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"left_delete",
+					null,
+					"AQAAAE8AAAAAAAAATwAAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAAUAAAAAAAAABQAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/run_python.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Automatic"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Run (with args)..."
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Check"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Test"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Test (with args)..."
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Bench"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Document"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Clippy"
+				],
+				[
+					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+					"Script"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Rust Enhanced/RustEnhanced.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Test"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Bench"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/R/R.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/R/R.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/ShellScript/ShellScript.sublime-build",
+					""
+				],
+				[
+					"Packages/MarkdownPreview/Markdown.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/MarkdownPreview/Markdown.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"toml",
+				"Set Syntax: TOML"
+			],
+			[
+				"breakpoint",
+				"Debugger: Add Function Breakpoint"
+			],
+			[
+				"set run",
+				"Set Syntax: Rust Enhanced"
+			],
+			[
+				"pre rust",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"rust en",
+				"Set Syntax: Rust Enhanced"
+			],
+			[
+				"set syn ru",
+				"Set Syntax: Rust Enhanced"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pres rust",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"rust-ana pre",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"edit",
+				"BetterSnippetManager: Edit Snippets"
+			],
+			[
+				"better",
+				"BetterSnippetManager: Edit Snippets"
+			],
+			[
+				"snippet maa",
+				"BetterSnippetManager: Edit Snippets"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"mak",
+				"Set Syntax: Makefile"
+			],
+			[
+				"set make",
+				"Set Syntax: Makefile Plus"
+			],
+			[
+				"ui sel",
+				"UI: Select Color Scheme"
+			],
+			[
+				"us",
+				"UI: Select Color Scheme"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"cy",
+				"Set Syntax: Cython"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"pyt",
+				"SublimeREPL: Python"
+			],
+			[
+				"set cytho",
+				"Set Syntax: Cython"
+			],
+			[
+				"set mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"conver",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"clo",
+				"File: Close All"
+			],
+			[
+				"set mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"color scheme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"project",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp R",
+				"Preferences: LSP-R Settings"
+			],
+			[
+				"outline",
+				"Outline: Toggle Sort"
+			],
+			[
+				"lsp",
+				"LSP: Restart Server"
+			],
+			[
+				"lspre",
+				"LSP: Restart Server"
+			],
+			[
+				"lsp restar",
+				"LSP: Restart Server"
+			],
+			[
+				"autosplit",
+				"Autosplit: Join argument list"
+			],
+			[
+				"origami",
+				"Preferences: Origami Key Bindings"
+			],
+			[
+				" ori des",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"origami ",
+				"Preferences: Origami Settings"
+			],
+			[
+				"orign de",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"origami focus",
+				"Origami: Focus on Pane on the Right"
+			],
+			[
+				"origamicreate",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"package insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lsp rest",
+				"LSP: Restart Server"
+			],
+			[
+				"lsp resta",
+				"LSP: Restart Server"
+			],
+			[
+				"lsp re",
+				"LSP: Find References"
+			],
+			[
+				"pres auto",
+				"Preferences: AutoPep8 Settings – User"
+			],
+			[
+				"djan",
+				"Set Syntax: Django HTML"
+			],
+			[
+				"jin",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				"djang",
+				"Set Syntax: Django HTML"
+			],
+			[
+				"git dif",
+				"Git: Diff Current File"
+			],
+			[
+				"html djan",
+				"Set Syntax: Django HTML"
+			],
+			[
+				"lsp ",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"ls",
+				"LSP: Restart Server"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"prefer setting",
+				"Preferences: Settings"
+			],
+			[
+				"git bla",
+				"Git: Blame"
+			],
+			[
+				"git",
+				"Git: Gui"
+			],
+			[
+				"commit",
+				"Git: Commit history"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"gits",
+				"Git: Diff Current File (Ignore Whitespace)"
+			],
+			[
+				"gitig",
+				"Gitignore: New gitignore"
+			],
+			[
+				"insert",
+				"Gitmoji: Insert emoji"
+			],
+			[
+				"gio",
+				"Gitmoji: Insert emoji"
+			],
+			[
+				"docker",
+				"Set Syntax: Dockerfile"
+			],
+			[
+				"set docker",
+				"Set Syntax: Dockerfile"
+			],
+			[
+				"convert",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conver ",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"django",
+				"Set Syntax: Django HTML"
+			],
+			[
+				"set syn d",
+				"Set Syntax: Django HTML"
+			],
+			[
+				"set djano",
+				"Set Syntax: Django HTML"
+			],
+			[
+				"set syn djan",
+				"Set Syntax: Django HTML"
+			],
+			[
+				"set synt dj",
+				"Set Syntax: Django HTML"
+			],
+			[
+				"lspre ",
+				"LSP: Rename"
+			],
+			[
+				"book",
+				"Bookmarks: Select Next"
+			],
+			[
+				"bok",
+				"Bookmarks: Toggle"
+			],
+			[
+				"bo",
+				"Bookmarks: Toggle"
+			],
+			[
+				"Snippet: ",
+				"BetterSnippetManager: Edit Snippets"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"helk",
+				"Helium: List Kernels"
+			],
+			[
+				"repl py",
+				"SublimeREPL: Python"
+			],
+			[
+				"termin",
+				"Terminus: List Shells"
+			],
+			[
+				"ter",
+				"Terminal: Open"
+			],
+			[
+				"termianl",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"terminalview",
+				"Preferences: Terminal View: Color Scheme"
+			],
+			[
+				"terminalv",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"terminal",
+				"Terminality: Browse Commands..."
+			],
+			[
+				"termina",
+				"Terminality: Browse Commands..."
+			],
+			[
+				"termius",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"termi",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"edi",
+				"BetterSnippetManager: Edit Snippets"
+			],
+			[
+				"todo",
+				"TodoReview: Open Files"
+			],
+			[
+				"highg",
+				"HighlightWords: Highlight Words"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"set syn py",
+				"Set Syntax: Python"
+			],
+			[
+				"yto",
+				"Set Syntax: Todo"
+			],
+			[
+				"lsp restart",
+				"LSP: Restart Server"
+			],
+			[
+				"synax jin",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"ui ch",
+				"UI: Select Color Scheme"
+			],
+			[
+				"res",
+				"LSP: Restart Server"
+			],
+			[
+				"stop",
+				"Live Server: Stop"
+			],
+			[
+				"live",
+				"Live Server: Open In Browser"
+			],
+			[
+				"start",
+				"Live Server: Start"
+			],
+			[
+				"sto",
+				"Live Server: Stop"
+			],
+			[
+				"prefer live",
+				"Preferences: Live Server Settings"
+			],
+			[
+				"live server",
+				"Live Server: Open In Browser"
+			],
+			[
+				"li",
+				"Live Server: Stop"
+			],
+			[
+				"restart",
+				"LSP: Restart Server"
+			],
+			[
+				"ui ",
+				"UI: Select Theme"
+			],
+			[
+				"lsp refere",
+				"LSP: Find References"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"find",
+				"File Manager: Find In Files"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"find in",
+				"File Manager: Find In Files"
+			],
+			[
+				"un",
+				"Code Folding: Unfold All"
+			],
+			[
+				"fold all",
+				"Code Folding: Fold All"
+			],
+			[
+				"find all",
+				"Code Folding: Unfold All"
+			],
+			[
+				"brea",
+				"Xdebug: Add/Remove Breakpoint"
+			],
+			[
+				"stop dec",
+				"Xdebug: Stop Debugging (Close Windows)"
+			],
+			[
+				"debug",
+				"Xdebug: Restart Session"
+			],
+			[
+				"lsp sym",
+				"LSP: Goto Symbol"
+			],
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"new file",
+				"File: New View into File"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			],
+			[
+				"Install Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 184.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/alexzander/Alexzander__/programming/rust/python"
+	],
+	"file_history":
+	[
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/mod.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/examples/example.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/Makefile",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/rust-core-dev.sublime-project",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/examples/list.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/src/rust-core-dev.sublime-workspace",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/src/lib.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/src/aesthetics.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/tests/test_aesthetics.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/Cargo.lock",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/Cargo.toml",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/README.md",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/TODO.md",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/LICENSE",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/CONTRIBUTING.md",
+		"/home/alexzander/Alexzander__/programming/rust/core-dev/.gitignore",
+		"/home/alexzander/Alexzander__/programming/code_to_analyze/lapce/defaults/settings.toml",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/fs.rs",
+		"/home/alexzander/Alexzander__/programming/rust/web-server/src/templates/404.html",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/io/mod.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs",
+		"/home/alexzander/Alexzander__/programming/rust/web-server/src/templates",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/turtle-1.0.0-rc.3/src/turtle.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs",
+		"/home/alexzander/Alexzander__/programming/rust/python/docs/python_list/append_pbool.md",
+		"/home/alexzander/Alexzander__/programming/rust/python/target/doc/python/index.html",
+		"/home/alexzander/Alexzander__/programming/rust/python/src/lib.rs",
+		"/home/alexzander/Alexzander__/programming/rust/python/src/object.rs",
+		"/home/alexzander/Alexzander__/programming/rust/python/src/int.rs",
+		"/home/alexzander/Alexzander__/programming/rust/python/src/dict.rs",
+		"/home/alexzander/Alexzander__/programming/rust/python/.gitignore",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/macros/mod.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/fmt/mod.rs",
+		"/home/alexzander/Alexzander__/programming/rust/python/src/_char.rs",
+		"/home/alexzander/rust/rust.md",
+		"/home/alexzander/Alexzander__/programming/projects/alexzanderr.github.io/cv/cv.html",
+		"/home/alexzander/Alexzander__/programming/projects/alexzanderr.github.io/connect_with_me.json",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/error.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/io/error.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/pattern.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/lifetime.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/Cargo.toml",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/collections.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/hashmap.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/err.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/docs/docs.md",
+		"/home/alexzander/Alexzander__/programming/rust/core/TODO.md",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/generics.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/src/lib.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/src/algorithms.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/color-backtrace-0.5.1/src/lib.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/spinners.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/rust-core.sublime-project",
+		"/home/alexzander/Alexzander__/manjaro-21-xfce/aur-packages/teams/PKGBUILD",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/macros.rs",
+		"/home/alexzander/.config/sublime-text/Packages/User/snippets/rust,/example_code.sublime-snippet",
+		"/home/alexzander/Alexzander__/programming/rust/core/tests/test_algorithms.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/rstest-0.12.0/src/lib.rs",
+		"/home/alexzander/Alexzander__/programming/ProgrammingProblems/leetcode/two-sum/solution.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/test.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/flow_control.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/epl",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/defaults.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/panic_test.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/src/main.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/sub.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/works.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/mods.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/enum.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/src/handler/mod.rs",
+		"/home/alexzander/.config/sublime-text/Packages/User/snippets/rust/print_python.sublime-snippet",
+		"/home/alexzander/Alexzander__/programming/rust/core/src/handler/something.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/subprocess-0.2.8/src/os_common.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/subprocess-0.2.8/src/builder.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/convert/mod.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/error.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/own.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/python.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/types.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/structs.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/ctrlc.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/bat/tests/assets.rs",
+		"/home/alexzander/Alexzander__/programming/ProgrammingProblems/leetcode/palindrome-number/rust/main.rs",
+		"/home/alexzander/Alexzander__/programming/ProgrammingProblems/leetcode/palindrome-number/rust/solution.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/lib.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/bat/assets/syntaxes/02_Extra/TypeScript.sublime-syntax",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/clone.rs",
+		"/home/alexzander/.config/sublime-text/Packages/User/snippets/rust/allow_everything.sublime-snippet",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/macros.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/oop.rs",
+		"/home/alexzander/.config/sublime-text/Packages/User/snippets/rust/print_python_macro.sublime-snippet",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/synh.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/html_to_stdout.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/examples/synstats.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/syn_stats.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/examples/syntest.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/syntect-4.6.0/src/dumps.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/syntect-4.6.0/src/highlighting/theme_set.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/syntect-4.6.0/src/easy.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/examples/synhtml.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/html_gen.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/syntest.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/examples/synhtml-css-classes.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/examples/syncat.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/bat/src/bin/bat/app.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/bat/src/bin/bat/clap_app.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/bat/src/bin/bat/main.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/bat/examples/inputs.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/bat/Cargo.toml",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/examples/parsyncat.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/examples/gendata.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/Makefile",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/syntect-4.6.0/src/highlighting/theme.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/src/highlighting/theme.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/repos/syntect/src/highlighting/theme_load.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/syntect-4.6.0/src/util.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/target/doc/syn/macro.custom_keyword!.html",
+		"/home/alexzander/Alexzander__/programming/rust/core/examples/http.rs",
+		"/home/alexzander/.cargo/registry/src/github.com-1ecc6299db9ec823/gtk-0.14.3/src/auto/constants.rs",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/any.rs",
+		"/home/alexzander/Alexzander__/programming/rust/core/test.py",
+		"/home/alexzander/.config/sublime-text/Packages/User/snippets/markdown/rs.sublime-snippet",
+		"/home/alexzander/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs"
+	],
+	"find":
+	{
+		"height": 47.0
+	},
+	"find_in_files":
+	{
+		"height": 176.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "rust-python-objects.sublime-project",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+							"rb_l0_<default>":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										0,
+										1
+									],
+									[
+										93,
+										94
+									]
+								],
+								"scope": "<default>.l0.rb"
+							},
+							"rb_l1_<default>":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										15,
+										16
+									],
+									[
+										91,
+										92
+									]
+								],
+								"scope": "<default>.l1.rb"
+							},
+							"rb_l2_<default>":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										19,
+										20
+									],
+									[
+										88,
+										89
+									]
+								],
+								"scope": "<default>.l2.rb"
+							},
+							"rb_l3_<default>":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										67,
+										68
+									],
+									[
+										84,
+										85
+									]
+								],
+								"scope": "<default>.l3.rb"
+							}
+						},
+						"selection":
+						[
+							[
+								35,
+								35
+							]
+						],
+						"settings":
+						{
+							"AutoSetSyntax/is_transient": false,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"selector": "- comment - punctuation.separator - punctuation.definition.string.end - constant.character.escape - invalid.illegal - punctuation.section.mapping - punctuation.section.sequence",
+									"server": "LSP-json"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///home/alexzander/Alexzander__/programming/rust/python/rust-python-objects.sublime-project",
+							"rainbow_checked": true,
+							"show_definitions": false,
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 47.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.AutoSetSyntax":
+	{
+		"height": 0.0
+	},
+	"output.Debugger":
+	{
+		"height": 210.0
+	},
+	"output.Debugger: Console":
+	{
+		"height": 0.0
+	},
+	"output.Debugger: Protocol":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.Terminus":
+	{
+		"height": 913.0
+	},
+	"output.autopep8":
+	{
+		"height": 0.0
+	},
+	"output.diagnostics":
+	{
+		"height": 291.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 291.0
+	},
+	"output.find_results":
+	{
+		"height": 168.0
+	},
+	"output.git":
+	{
+		"height": 210.0
+	},
+	"output.language servers":
+	{
+		"height": 367.0
+	},
+	"output.markdown":
+	{
+		"height": 180.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups-dummy":
+	{
+		"height": 0.0
+	},
+	"output.references":
+	{
+		"height": 259.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "rust-python-objects.sublime-project",
+	"replace":
+	{
+		"height": 90.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"exa",
+				"examples/example.rs"
+			],
+			[
+				"test",
+				"tests/test_aesthetics.rs"
+			],
+			[
+				"list",
+				"examples/list.rs"
+			],
+			[
+				"todo",
+				"TODO.md"
+			],
+			[
+				"make",
+				"Makefile"
+			],
+			[
+				"cargo",
+				"Cargo.toml"
+			],
+			[
+				"rust",
+				"rust/rust.md"
+			],
+			[
+				"lib.rs",
+				"src/lib.rs"
+			],
+			[
+				"string",
+				"src/string.rs"
+			],
+			[
+				"ob",
+				"src/object.rs"
+			],
+			[
+				"float",
+				"src/float.rs"
+			],
+			[
+				"obj",
+				"src/object.rs"
+			],
+			[
+				"char",
+				"src/character.rs"
+			],
+			[
+				"int",
+				"src/int.rs"
+			],
+			[
+				"bool",
+				"src/boolean.rs"
+			],
+			[
+				"int.rs",
+				"src/int.rs"
+			],
+			[
+				"rus",
+				"rust/rust.md"
+			],
+			[
+				"docs",
+				"docs/docs.md"
+			],
+			[
+				"life",
+				"examples/lifetime.rs"
+			],
+			[
+				"test_alog",
+				"tests/test_algorithms.rs"
+			],
+			[
+				"algo",
+				"src/algorithms.rs"
+			],
+			[
+				"gene",
+				"examples/generics.rs"
+			],
+			[
+				"hash",
+				"examples/hashmap.rs"
+			],
+			[
+				"caro",
+				"Cargo.toml"
+			],
+			[
+				"type",
+				"examples/types.rs"
+			],
+			[
+				"types",
+				"repos/bat/assets/syntaxes/02_Extra/TypeScript.sublime-syntax"
+			],
+			[
+				"flow",
+				"examples/flow_control.rs"
+			],
+			[
+				"Cargo",
+				"Cargo.toml"
+			],
+			[
+				"Make",
+				"target/doc/syn/macro.custom_keyword!.html"
+			],
+			[
+				"lib",
+				"src/lib.rs"
+			],
+			[
+				"com",
+				"compile.py"
+			],
+			[
+				"",
+				"jit.py"
+			],
+			[
+				"main",
+				"src/main.rs"
+			],
+			[
+				"long",
+				"long.py"
+			],
+			[
+				"git.p",
+				"pepe/core/git.py"
+			],
+			[
+				"create",
+				"pepe/argv/create.py"
+			],
+			[
+				"pipenv",
+				"pipenv.md"
+			],
+			[
+				"far",
+				"marketing/comenzi.farmaciatei.json"
+			],
+			[
+				"bebe",
+				"marketing/comenzi.bebetei.json"
+			],
+			[
+				"spinner",
+				"_core/animations/spinners.py"
+			],
+			[
+				"req",
+				"_core/_requests.py"
+			],
+			[
+				"progre",
+				"_core/animations/progress.py"
+			],
+			[
+				"prore",
+				"_core/progress__.py"
+			],
+			[
+				"spiner",
+				"_core/animations/spinners.py"
+			],
+			[
+				"somet",
+				"something.txt"
+			],
+			[
+				"acc",
+				"Accounts&Passwords.json"
+			],
+			[
+				"ac",
+				"Achievements2021.txt"
+			],
+			[
+				"diocs",
+				"cursuri/drive/drive-download-20220129T143222Z-00ASD1/Lab 322/New folder/Data/population_total.csv"
+			],
+			[
+				"sol",
+				"rezolvare/problema-1/procedura-1/solution.r"
+			],
+			[
+				"redo",
+				"redo.r"
+			],
+			[
+				"raport",
+				"raport.Rmd"
+			],
+			[
+				"R",
+				"R.md"
+			],
+			[
+				"pipv",
+				"pipenv.md"
+			],
+			[
+				".git",
+				".gitignore"
+			],
+			[
+				".env",
+				"django_web_app/.env"
+			],
+			[
+				"app.py",
+				"~/Alexzander__/programming/python3/learning/quart/app.py"
+			],
+			[
+				"set",
+				"django_web_app/application/settings.py"
+			],
+			[
+				"regist",
+				"django_web_app/todos/templates/todos/register.html"
+			],
+			[
+				"base",
+				"django_web_app/templates/base_index.html"
+			],
+			[
+				"register.js",
+				"django_web_app/todos/static/todos/js/register.js"
+			],
+			[
+				"register",
+				"django_web_app/todos/templates/todos/register.html"
+			],
+			[
+				"control_pa",
+				"django_web_app/control_panel/models.py"
+			],
+			[
+				"todos_",
+				"todos/tests/test_todos_api_views.py"
+			],
+			[
+				"test_api",
+				"api/tests/test_api_views.py"
+			],
+			[
+				"read",
+				"readme.md"
+			],
+			[
+				"mongo",
+				"mongo_client.py"
+			],
+			[
+				"remote",
+				"remote_credentials.py"
+			],
+			[
+				"crede",
+				"credentials.py"
+			],
+			[
+				"CRE",
+				"credentials.py"
+			],
+			[
+				"views",
+				"views_enhanced.py"
+			],
+			[
+				"conf",
+				"conftest.py"
+			],
+			[
+				"pytest",
+				"pytest.ini"
+			],
+			[
+				"test_todos",
+				"todos/tests/test_todos_views.py"
+			],
+			[
+				"ake",
+				"Makefile"
+			],
+			[
+				"SET",
+				"application/settings.py"
+			],
+			[
+				"css",
+				"todos/static/todos/css/style.css"
+			],
+			[
+				"url",
+				"application/urls.py"
+			],
+			[
+				"data",
+				"routers/database_routers.py"
+			],
+			[
+				"sett",
+				"application/settings.py"
+			],
+			[
+				"models",
+				"todos/models.py"
+			],
+			[
+				"application/ur",
+				"application/urls.py"
+			],
+			[
+				"todod",
+				"TODO.md"
+			],
+			[
+				"gitnore",
+				".gitignore"
+			],
+			[
+				"python",
+				"pyrightconfig.json"
+			],
+			[
+				"cred",
+				"credentials.py"
+			],
+			[
+				"todos",
+				"todos/views.py"
+			],
+			[
+				"modes",
+				"api/models.py"
+			],
+			[
+				"database",
+				"routers/database_routers.py"
+			],
+			[
+				"run",
+				"run-server.sh"
+			],
+			[
+				"maker",
+				"maker"
+			],
+			[
+				"todos/index",
+				"todos/templates/todos/index.html"
+			],
+			[
+				"manage",
+				"manager.sh"
+			],
+			[
+				"todos views",
+				"todos/api/views.py"
+			],
+			[
+				"todos.",
+				"todos/views.py"
+			],
+			[
+				"urls.py",
+				"application/urls.py"
+			],
+			[
+				"learning",
+				"learning/views.py"
+			],
+			[
+				"mana",
+				"manage.py"
+			],
+			[
+				"learn",
+				"learning/views.py"
+			],
+			[
+				"BASE",
+				"templates/base_index.html"
+			],
+			[
+				"base_inde",
+				"templates/base_index.html"
+			],
+			[
+				"urls",
+				"simulation/core/urls.py"
+			],
+			[
+				"extene",
+				"todos/templates/extender.html"
+			],
+			[
+				"sublime",
+				"django_web_app.sublime-project"
+			],
+			[
+				"route",
+				"django_web_app/application/templates/index_routes.html"
+			],
+			[
+				"base.cs",
+				"django_web_app/static/css/base.css"
+			],
+			[
+				"isnta",
+				"documentation/new_manjaro_installation.md"
+			],
+			[
+				"ett",
+				"django_web_app/application/settings.py"
+			],
+			[
+				"pro",
+				"django_web_app/ProjectState.json"
+			],
+			[
+				"telegram",
+				"django_web_app/telegram/__init__.py"
+			],
+			[
+				"socke",
+				"django_web_app/telegram/static/js/socket_client.js"
+			],
+			[
+				"context",
+				"django_web_app/templates/context_menu.html"
+			],
+			[
+				"docker",
+				"django_web_app/docker-compose.yaml"
+			],
+			[
+				"docker-com",
+				"django_web_app/docker-compose.yaml"
+			],
+			[
+				"require",
+				"django_web_app/simulation/requirements.txt"
+			],
+			[
+				"Docker",
+				"django_web_app/simulation/Dockerfile"
+			],
+			[
+				"cre",
+				"django_web_app/credentials.py"
+			],
+			[
+				"regi",
+				"django_web_app/django_web_app/todos/templates/register.html"
+			],
+			[
+				"todo_inde",
+				"django_web_app/django_web_app/todos/templates/todos_index.html"
+			],
+			[
+				"regis",
+				"django_web_app/django_web_app/todos/templates/register.html"
+			],
+			[
+				"todos_inde",
+				"django_web_app/django_web_app/todos/templates/todos_index.html"
+			],
+			[
+				"view",
+				"django_web_app/django_web_app/todos/api/views.py"
+			],
+			[
+				"index",
+				"django_web_app/django_web_app/todos/templates/index.html"
+			],
+			[
+				"rnu",
+				"django_web_app/django_web_app/run.sh"
+			],
+			[
+				"rea",
+				"django_web_app/readme.md"
+			],
+			[
+				"runs",
+				"django_web_app/django_web_app/run.sh"
+			],
+			[
+				"ursl",
+				"django_web_app/django_web_app/todos/urls.py"
+			],
+			[
+				"to_exte",
+				"django_web_app/django_web_app/todos/templates/to_extend.html"
+			],
+			[
+				"testing",
+				"django_web_app/django_web_app/todos/templates/testing.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Alexzander__/programming/projects/chuck_noris_asp_net/ChuckNorris/ProjectChuckNorris/ChuckNorris.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 317.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -9,7 +9,7 @@ license = "MIT"
 # license-file = "LICENSE"
 homepage = "https://github.com/alexzanderr/rust-python-objects"
 repository = "https://github.com/alexzanderr/rust-python-objects"
-documentation = "https://docs.rs/rust-python-objects"
+documentation = "https://docs.rs/python-objects"
 readme = "README.md"
 keywords = ["python", "objects", "python-objects"]
 

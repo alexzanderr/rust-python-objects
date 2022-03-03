@@ -23,64 +23,51 @@ use python::Float;
 use python::Bool;
 use python::_String;
 
-// builtins
+use python::list::Append;
+use python::list::AppendFront;
+// builtins.rs
 use python::print;
 use python::len;
 use python::repr;
-
-
-// impl _Object for List {
-//     fn __str__(self) {
-//         println!("{:?}", self.inner);
-//     }
-// }
-
-// pub fn len<T>(_object: &T) -> i32 where T: _Object {
-//     _object.__len__()
-// }
-
-// pub fn str<T>(_object: &T) where T: _Object {
-//     _object.__str__()
-// }
-
-// impl _Object for List<Int> {
-//     fn __str__(self) {
-//         println!("{:?}", self.inner);
-//     }
-// }
-
-
-// .. and so on
 
 
 fn main() {
     // example of what i want
 
     let mut python_list =
-        List::from_string(String::from("123123"));
-    python_list.append_int(123);
-    python_list.append_float(123.123);
-    python_list.append_float(123.123);
-    python_list.append_float(123.123);
-    python_list.append_string(String::from("asdasd"));
+        List::from(String::from("123123"));
 
-    python_list.append_list(
-        List::from_string("andrew".to_string()));
-    python_list.append_pstring(
+    python_list.append(123);
+
+    python_list.append(123);
+
+    python_list.append(List::from(List::from(String::from("working"))));
+
+    python_list.append(123.123);
+    python_list.append(123.123);
+    python_list.append(123.123);
+    python_list.append(String::from("asdasd"));
+
+    python_list.append(
+        List::from("andrew".to_string()));
+    python_list.append(
         _String::from_string(
             String::from("python string")));
 
-    python_list.append_pbool(Bool::new(true));
-    python_list.append_pbool(Bool::new(false));
-    python_list.append_bool(false);
+    python_list.append(Bool::new(true));
+    python_list.append(Bool::new(false));
+    python_list.append(false);
 
     print(&python_list);
     print(len(&python_list));
 
 
+    python_list.append_front("salutare");
+
     for o in python_list.iter() {
         print(o)
     }
+
 
 
     // let oo = Object::Int(Int::new(123));
