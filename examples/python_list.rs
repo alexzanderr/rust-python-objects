@@ -39,19 +39,16 @@ fn main() {
         List::from(String::from("123123"));
 
     python_list.append_back(123);
-    python_list.append_front("salutare");
-
+    python_list.append_front("hello");
     python_list.append_back(123);
-
     python_list.append_back(List::from(List::from(String::from("working"))));
-
     python_list.append_back(123.123);
     python_list.append_back(123.123);
     python_list.append_back(123.123);
     python_list.append_back(String::from("asdasd"));
 
     python_list.append_back(
-        List::from("andrew".to_string()));
+        List::from("something".to_string()));
     python_list.append_back(
         _String::from_string(
             String::from("python string")));
