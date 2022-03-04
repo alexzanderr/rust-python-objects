@@ -6,25 +6,32 @@
 
 
 
-pub mod int;
-pub mod float;
-pub mod string;
-pub mod character;
-pub mod object;
-pub mod list;
-pub mod dict;
-pub mod builtins;
-pub mod boolean;
+mod int;
+mod float;
+mod string;
+mod character;
+mod object;
+mod dict;
+mod builtins;
+mod boolean;
+mod list;
+
 
 pub use int::Int;
 pub use float::Float;
 pub use string::_String;
 pub use character::Char;
-pub use list::List;
 pub use object::Object;
 pub use object::_Object;
+pub use boolean::Bool;
 pub use dict::Dict;
+
+// builtins.rs
 pub use builtins::print;
 pub use builtins::len;
 pub use builtins::repr;
-pub use boolean::Bool;
+
+
+pub use list::List;
+pub use list::Append;
+pub use list::AppendFront;

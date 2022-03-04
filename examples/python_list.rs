@@ -11,24 +11,25 @@
     unused_must_use
 )]
 
+
 use std::collections::HashMap;
 use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
 
-use python::List;
-use python::Object;
-use python::Int;
-use python::Float;
-use python::Bool;
-use python::_String;
+// use python::Object;
+// use python::Int;
+// use python::Float;
+// use python::Bool;
+// use python::_String;
+// use python::List;
 
-use python::list::Append;
-use python::list::AppendFront;
-// builtins.rs
-use python::print;
-use python::len;
-use python::repr;
+// // builtins.rs
+// use python::print;
+// use python::len;
+// use python::repr;
+
+use python::*;
 
 
 fn main() {
@@ -37,36 +38,47 @@ fn main() {
     let mut python_list =
         List::from(String::from("123123"));
 
-    python_list.append(123);
+    python_list.append_back(123);
+    python_list.append_front("salutare");
 
-    python_list.append(123);
+    python_list.append_back(123);
 
-    python_list.append(List::from(List::from(String::from("working"))));
+    python_list.append_back(List::from(List::from(String::from("working"))));
 
-    python_list.append(123.123);
-    python_list.append(123.123);
-    python_list.append(123.123);
-    python_list.append(String::from("asdasd"));
+    python_list.append_back(123.123);
+    python_list.append_back(123.123);
+    python_list.append_back(123.123);
+    python_list.append_back(String::from("asdasd"));
 
-    python_list.append(
+    python_list.append_back(
         List::from("andrew".to_string()));
-    python_list.append(
+    python_list.append_back(
         _String::from_string(
             String::from("python string")));
 
-    python_list.append(Bool::new(true));
-    python_list.append(Bool::new(false));
-    python_list.append(false);
+    python_list.append_back(Bool::new(true));
+    python_list.append_back(Bool::new(false));
+    python_list.append_back(false);
 
     print(&python_list);
     print(len(&python_list));
 
 
-    python_list.append_front("salutare");
+    // python_list.append_front("salutare");
 
     for o in python_list.iter() {
         print(o)
     }
+
+
+    let list_from_str = "123123".parse::<List>().unwrap();
+    print(&list_from_str);
+
+    let iter = (0..5).into_iter();
+    // let list_from_iterator: List = iter.collect();
+    let list_from_iterator = iter.collect::<List>();
+    print(&list_from_iterator);
+
 
 
 

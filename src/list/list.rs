@@ -17,11 +17,13 @@
 
 
 use std::collections::VecDeque;
-use std::collections::vec_deque;
-use std::fmt::Display;
-use std::fmt::Formatter;
-use std::fmt::Result;
+
+use std::fmt;
+
+use std::error;
+
 use std::ops::Deref;
+use std::str::FromStr;
 
 use crate::_Object;
 use crate::Object;
@@ -32,22 +34,13 @@ use crate::Char;
 use crate::Bool;
 
 
+use super::Append;
+
 // mod object;
 // use object::Object;
 
-/// append function for List
-/// can append any data type
-pub trait Append<T>: Sized {
-    /// Performs append
-    fn append(&mut self, _: T) -> &mut Self;
-}
 
-/// appends to front of the list
-/// meaning: list.insert(o, item)
-pub trait AppendFront<T>: Sized {
-    /// performs the append front
-    fn append_front(&mut self, _: T) -> &mut Self;
-}
+
 
 /// the main component
 ///
@@ -80,155 +73,7 @@ impl List {
 }
 
 
-/// inline append for integer
-/// example
-///
-/// let mut one_elem = List::new();
-/// one_elem
-///     .append_int(123)
-///     .append_int(123)
-///     .append_int(123)
-///     .append_int(123)
-///     .append_int(123)
-///     .append_int(123)
-///     .append_int(123);
-/// println!("{}", one_elem);
-///
-/// [123, 123, 123, 123, 123, 123, 123]
-///
-impl Append<i32> for List {
-    fn append(&mut self, _integer: i32) -> &mut Self {
-        self._list.push_back(Object::Int(Int::new(_integer)));
-        self
-    }
-}
 
-impl Append<char> for List {
-    fn append(&mut self, _char: char) -> &mut Self {
-        self._list.push_back(Object::Char(Char::new(_char)));
-        self
-    }
-}
-
-impl Append<f32> for List {
-    fn append(&mut self, _float: f32) -> &mut Self {
-        self._list.push_back(Object::Float(Float::new(_float)));
-        self
-    }
-}
-
-
-impl Append<String> for List {
-    fn append(&mut self, string: String) -> &mut Self {
-        self._list.push_back(Object::String(_String::from_string(string)));
-        self
-    }
-}
-
-impl Append<_String> for List {
-    fn append(&mut self, _string: _String) -> &mut Self {
-        self._list.push_back(Object::String(_string));
-        self
-    }
-}
-
-impl Append<bool> for List {
-    fn append(&mut self, _bool: bool) ->&mut Self {
-        self._list.push_back(Object::Bool(Bool::new(_bool)));
-        self
-    }
-}
-
-
-impl Append<Bool> for List {
-
-    #[doc = include_str!("../docs/python_list/append_pbool.md")]
-    fn append(&mut self, _bool: Bool) ->&mut Self {
-        self._list.push_back(Object::Bool(_bool));
-        self
-    }
-}
-
-impl Append<List> for List {
-    fn append(&mut self, _list: List) -> &mut Self {
-        self._list.push_back(Object::List(_list));
-        self
-    }
-}
-
-
-
-
-impl AppendFront<i32> for List {
-    fn append_front(&mut self, _integer: i32) -> &mut Self {
-        self._list.push_front(Object::Int(Int::new(_integer)));
-        self
-    }
-}
-
-
-impl AppendFront<&str> for List {
-    fn append_front(
-        &mut self,
-        _static_string: &str
-    ) -> &mut Self {
-        self._list.push_front(Object::String(_String::from_str(_static_string)));
-        self
-    }
-}
-
-impl AppendFront<char> for List {
-    fn append_front(&mut self, _char: char) -> &mut Self {
-        self._list.push_front(Object::Char(Char::new(_char)));
-        self
-    }
-}
-
-impl AppendFront<f32> for List {
-    fn append_front(&mut self, _float: f32) -> &mut Self {
-        self._list.push_front(Object::Float(Float::new(_float)));
-        self
-    }
-}
-
-
-impl AppendFront<String> for List {
-    fn append_front(&mut self, string: String) -> &mut Self {
-        self._list.push_front(Object::String(_String::from_string(string)));
-        self
-    }
-}
-
-impl AppendFront<_String> for List {
-    fn append_front(&mut self, _string: _String) -> &mut Self {
-        self._list.push_front(Object::String(_string));
-        self
-    }
-}
-
-impl AppendFront<bool> for List {
-    fn append_front(&mut self, _bool: bool) ->&mut Self {
-        self._list.push_front(Object::Bool(Bool::new(_bool)));
-        self
-    }
-}
-
-
-impl AppendFront<Bool> for List {
-
-    #[doc = include_str!("../docs/python_list/append_pbool.md")]
-    fn append_front(&mut self, _bool: Bool) ->&mut Self {
-        self._list.push_front(Object::Bool(_bool));
-        self
-    }
-}
-
-impl AppendFront<List> for List {
-    fn append_front(&mut self, _list: List) -> &mut Self {
-        self._list.push_front(Object::List(_list));
-        self
-    }
-}
 
 impl _Object for List {
     fn __len__(&self) -> usize {
@@ -245,8 +90,8 @@ impl _Object for List {
 }
 
 
-impl Display for List {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+impl fmt::Display for List {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         // if list is empty then we print '[]'
         if self._list.len() == 0 {
             write!(f, "[]");
@@ -334,7 +179,7 @@ impl From<String> for List {
 impl From<i32> for List {
 
     // include markdown file as doc comment for this function
-    #[doc = include_str!("../docs/python_list/showcase.md")]
+    #[doc = include_str!("../../docs/python_list/showcase.md")]
     fn from(_integer: i32) -> List {
         let mut vector_deque = VecDeque::new();
         vector_deque.push_back(Object::Int(Int::new(_integer)));
@@ -355,5 +200,41 @@ impl From<&List> for List {
         List {
             _list: temp_list,
         }
+    }
+}
+
+
+
+impl FromStr for List {
+    type Err = Box<dyn error::Error>;
+
+    fn from_str(_static_str: &str) -> Result<Self, Self::Err> {
+        Ok(List::from(_static_str))
+    }
+}
+
+
+impl FromIterator<i32> for List {
+    fn from_iter<T: IntoIterator<Item = i32>>(
+        _integer_iterator: T
+    ) -> Self {
+        let mut integer_list = List::new();
+        for integer in _integer_iterator {
+            integer_list.append_back(integer);
+        }
+        integer_list
+    }
+}
+
+
+impl FromIterator<String> for List {
+    fn from_iter<T: IntoIterator<Item = String>>(
+        _string_iterator: T
+    ) -> Self {
+        let mut string_list = List::new();
+        for _string in _string_iterator {
+            string_list.append_back(_string);
+        }
+        string_list
     }
 }

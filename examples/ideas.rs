@@ -18,6 +18,4 @@ extern crate color_backtrace;
 fn main() {
     color_backtrace::install();
 
-    let mut dec = VecDeque::new();
-    dec.push_front(value)
 }
