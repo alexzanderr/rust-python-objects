@@ -47,7 +47,14 @@ impl AppendFront<char> for List {
 
 impl AppendFront<f32> for List {
     fn append_front(&mut self, _float: f32) -> &mut Self {
-        self._list.push_front(Object::Float(Float::new(_float)));
+        self._list.push_front(Object::Float32(Float::from(_float)));
+        self
+    }
+}
+
+impl AppendFront<f64> for List {
+    fn append_front(&mut self, _float: f64) -> &mut Self {
+        self._list.push_front(Object::Float64(Float::from(_float)));
         self
     }
 }

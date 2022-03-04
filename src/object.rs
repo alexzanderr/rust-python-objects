@@ -28,12 +28,21 @@ pub trait _Object {
 
 
 // #[derive(Eq, Hash, PartialEq)]
+/// supreme enum
 pub enum Object {
+    /// char object
     Char(Char),
+    /// int object
     Int(Int),
-    Float(Float),
+    /// float32 object
+    Float32(Float<f32>),
+    /// float64 object
+    Float64(Float<f64>),
+    /// String object
     String(_String),
+    /// List object
     List(List),
+    /// Bool object
     Bool(Bool),
 }
 
@@ -45,7 +54,8 @@ impl Display for Object {
         match &*self {
             Object::Char(_char) => write!(f, "{}", _char),
             Object::Int(_int) => write!(f, "{}", _int),
-            Object::Float(_float) => write!(f, "{}", _float),
+            Object::Float32(_float) => write!(f, "{}", _float),
+            Object::Float64(_float) => write!(f, "{}", _float),
             Object::String(_string) => write!(f, "{}", _string),
             Object::List(_list) => write!(f, "{}", _list),
             Object::Bool(_bool) => write!(f, "{}", _bool),

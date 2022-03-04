@@ -30,6 +30,7 @@ pub use dict::Dict;
 pub use builtins::print;
 pub use builtins::len;
 pub use builtins::repr;
+pub use builtins::type_of;
 
 
 pub use list::List;

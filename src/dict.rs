@@ -28,6 +28,7 @@ use crate::Object;
 
 
 
+// TODO implement hash trait for object
 pub struct Dict {
     _dict: HashMap<Object, Object>
 }

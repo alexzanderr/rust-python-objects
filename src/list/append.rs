@@ -43,6 +43,21 @@ impl Append<i32> for List {
     }
 }
 
+impl Append<Float<f32>> for List {
+    fn append_back(&mut self, _float: Float<f32>) -> &mut Self {
+        self._list.push_back(Object::Float32(Float::from(_float)));
+        self
+    }
+}
+
+impl Append<Float<f64>> for List {
+    fn append_back(&mut self, _float: Float<f64>) -> &mut Self {
+        self._list.push_back(Object::Float64(Float::from(_float)));
+        self
+    }
+}
+
+
 impl Append<&str> for List {
     fn append_back(&mut self, _static_string: &str) -> &mut Self {
         self._list.push_back(Object::String(_String::from_str(_static_string)));
@@ -60,7 +75,7 @@ impl Append<char> for List {
 
 impl Append<f32> for List {
     fn append_back(&mut self, _float: f32) -> &mut Self {
-        self._list.push_back(Object::Float(Float::new(_float)));
+        self._list.push_back(Object::Float32(Float::from(_float)));
         self
     }
 }

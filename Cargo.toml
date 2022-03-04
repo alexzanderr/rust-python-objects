@@ -20,8 +20,13 @@ categories = ["data-structures"]
 [dependencies]
 unicode-segmentation = "1.9.0"
 color-backtrace = "0.5.1"
+unindent = "0.1.8"
 
 
+[profile.release]
+# Link-time optimization (LTO) is a whole-program optimization technique that can improve runtime performance by 10-20% or more, at the cost of increased build times. For any individual Rust program it is easy to see if the runtime versus compile-time trade-off is worthwhile.
+# The simplest way to try LTO is to add the following lines to the Cargo.toml file and do a release build.
+lto = true
 
 [lib]
 name = "python"

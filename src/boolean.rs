@@ -30,19 +30,15 @@ impl Bool {
 
 impl _Object for Bool {
     fn __str__(&self) -> String {
-        match self._bool {
-            true => format!("True"),
-            false => format!("False")
+        if self._bool {
+            format!("True")
+        } else {
+            format!("False")
         }
-        // if self._bool {
-        //     format!("True")
-        // } else {
-        //     format!("False")
-        // }
     }
 
     fn __len__(&self) -> usize {
-        8usize
+        8
     }
 
     fn __repr__(&self) -> String {
