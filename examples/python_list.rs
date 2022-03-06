@@ -53,7 +53,7 @@ fn main() {
     python_list.append_front("hello");
     python_list.append_back(123);
     // append a list
-    python_list.append_back(List::from(List::from(String::from("working"))));
+    python_list.append_back(List::from(String::from("working")));
     // note that the python list supports another python list inside
 
     // append a float
