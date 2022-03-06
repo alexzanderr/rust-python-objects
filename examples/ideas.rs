@@ -26,6 +26,10 @@ fn are_you_on_linux() {
     println!("You are *not* running linux!");
 }
 
+fn const_generics<const T: usize>(_x: T) {
+    println!("{}", _x)
+}
+
 fn main() {
     color_backtrace::install();
     are_you_on_linux();

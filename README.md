@@ -18,7 +18,7 @@ be happy.
 
 
 # Showcases
-1. [`python-list`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list.md)
+1. [`python-list`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list/showcase.md)
 2. [`python-dict`] -> incoming
 
 
