@@ -1,5 +1,3 @@
-
-
 #![allow(
     dead_code,
     unused_imports,
@@ -42,8 +40,7 @@ use python::*;
 
 fn main() {
     // create a new python list
-    let mut python_list =
-        List::from(String::from("123123"));
+    let mut python_list = List::from(String::from("123123"));
     // at this point the list will look like this
     // ['1', '2', '3', '1', '2', '3']
 
@@ -63,15 +60,12 @@ fn main() {
     // append a rust String
     python_list.append_back(String::from("asdasd"));
 
-    python_list.append_back(
-        List::from("something".to_string()));
+    python_list.append_back(List::from("something".to_string()));
 
     // append a python string
     // note that this _String is from this crate
     // its the struct that handles the String and &str data types
-    python_list.append_back(
-        _String::from_string(
-            String::from("python string")));
+    python_list.append_back(_String::from(String::from("python string")));
 
     // append a python bool
     // note that Bool is the python struct that handles rust's bool
@@ -108,15 +102,11 @@ fn main() {
     let list_from_iterator = iter.collect::<List>();
     print(&list_from_iterator);
 
-
-
-
     // let oo = Object::Int(Int::new(123));
     // println!("{}", oo);
 
     // let oo = Object::Float(Float::new(123.123));
     // println!("{}", oo);
-
 
     // let empty_list = List::new();
     // println!("{}", empty_list);
@@ -173,7 +163,6 @@ fn main() {
 
     // let integer = Int { value: 123i32};
     // let floater = Float { value: 123.123f32};
-
 
     // println!("{}", len(&integer));
     // println!("{}", len(integer));

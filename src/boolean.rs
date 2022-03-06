@@ -1,8 +1,3 @@
-
-
-
-
-
 use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
@@ -13,7 +8,7 @@ use crate::_Object;
 /// Bool structure for True and False
 #[derive(Copy, Clone)]
 pub struct Bool {
-    _bool: bool
+    _bool: bool,
 }
 
 impl Bool {
@@ -23,7 +18,7 @@ impl Bool {
     /// let boolean = Bool::new(false)
     pub fn new(_bool: bool) -> Bool {
         Bool {
-            _bool
+            _bool,
         }
     }
 }
@@ -47,7 +42,10 @@ impl _Object for Bool {
 }
 
 impl Display for Bool {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+    fn fmt(
+        &self,
+        f: &mut Formatter<'_>,
+    ) -> Result {
         write!(f, "{}", self.__str__())
     }
 }

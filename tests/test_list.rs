@@ -1,12 +1,8 @@
-
-
 use pretty_assertions::assert_eq;
+use rstest::rstest;
 
 // crate
-use python::print;
-use python::List;
-use python::len;
-use python::repr;
+use python::*;
 
 
 #[test]
@@ -22,25 +18,24 @@ fn test_initialization() {
 #[test]
 fn test_append_int() {
     let mut python_list = List::new();
-    python_list.append_int(123);
-    python_list.append_int(123);
-    python_list.append_int(123);
-    python_list.append_int(123);
-    python_list.append_int(123);
-    print(python_list);
+    python_list.append_back(123);
+    python_list.append_back(123);
+    python_list.append_back(123);
+    python_list.append_back(123);
+    python_list.append_back(123);
+    print(&python_list);
+    let result = len(&python_list);
+    assert_eq!(result, 5);
+    // incoming
+    // assert_eq!(repr(&python_list), 5);
 }
 
 
 #[test]
-fn test_pretty() {
-    assert_eq!(5, 5);
-}
-
-#[test]
-fn test_len() {
+fn test_append_bool() {
     let mut python_list = List::new();
-    python_list.append_bool(true);
-    python_list.append_bool(false);
+    python_list.append_back(true);
+    python_list.append_back(false);
     let result = len(&python_list);
     assert_eq!(result, 2)
 }

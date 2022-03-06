@@ -22,11 +22,11 @@ rr:
 
 # make t
 t:
-	cargo test -- --show-output
+	cargo test -j 8 -- --show-output
 
 # make test
 test:
-	cargo test -- --show-output
+	cargo test -j 8 -- --show-output
 
 
 # make p
@@ -34,11 +34,32 @@ p:
 	# for publishing to crates.io
 	cargo build --release
  	# cargo run --release
-	cargo doc
+	cargo doc --document-private-items
 	cargo test
+	cargo clippy -- -D warnings
+	cargo fmt --all -- --check
 	cargo publish
 
 
 # make d
 d:
 	cargo doc --open --document-private-items
+
+lint:
+	cargo clippy -- -D warnings
+
+fmt:
+	# just check the formatting
+	cargo fmt --all -- --check
+
+format:
+	# format in place
+	cargo fmt --all
+
+
+cti:
+	cargo build
+	cargo test
+	cargo doc --open --document-private-items
+	cargo clippy -- -D warnings
+	cargo fmt --all -- --check

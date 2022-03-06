@@ -1,4 +1,3 @@
-
 // std imports
 use std::fmt::Display;
 use std::fmt::Formatter;
@@ -13,9 +12,15 @@ use crate::Char;
 use crate::Bool;
 
 
+/// the supreme _Object trait
+/// that its derived types should
+/// implement like all the __functions__ from python
 pub trait _Object {
+    /// python repr(object)
     fn __repr__(&self) -> String;
+    /// python len(object)
     fn __len__(&self) -> usize;
+    /// python str(object)
     fn __str__(&self) -> String;
 }
 
@@ -48,7 +53,10 @@ pub enum Object {
 
 
 impl Display for Object {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+    fn fmt(
+        &self,
+        f: &mut Formatter<'_>,
+    ) -> Result {
         // why there is &* ?
         // it works without both..
         match &*self {

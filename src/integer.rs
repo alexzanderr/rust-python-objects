@@ -1,7 +1,3 @@
-
-
-
-
 use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result;
@@ -9,9 +5,11 @@ use std::fmt::Result;
 use crate::_Object;
 
 /// Int struct, holds and _integer: i32
-#[derive(Copy, Clone)]
+#[derive(Copy)]
+#[derive(Clone)]
+#[derive(Default)]
 pub struct Int {
-    _integer: i32
+    _integer: i32,
 }
 
 impl Int {
@@ -20,20 +18,23 @@ impl Int {
     /// let integer = Int::new(123)
     pub fn new(_integer: i32) -> Self {
         Int {
-            _integer
+            _integer,
         }
     }
+}
 
+
+impl From<&str> for Int {
     /// create new Int object from static str
     /// usage
     /// let integer = Int::from_str("123")
-    pub fn from_str(_str: &str) -> Self {
+    fn from(_static_string: &str) -> Self {
         let mut _integer: i32 = 0;
-        for _char in _str.chars() {
+        for _char in _static_string.chars() {
             _integer = _integer * 10 + _char.to_digit(10).unwrap() as i32;
         }
         Int {
-            _integer
+            _integer,
         }
     }
 }
@@ -53,7 +54,10 @@ impl _Object for Int {
 }
 
 impl Display for Int {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+    fn fmt(
+        &self,
+        f: &mut Formatter<'_>,
+    ) -> Result {
         write!(f, "{}", self._integer)
     }
 }

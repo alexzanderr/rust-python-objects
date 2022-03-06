@@ -4,12 +4,12 @@
 
 example
 ```rust
-use python::{List, Bool, print};
+use python::*;
 use pretty_assertions::assert_eq;
 
 let python_bool = Bool::new(true);
 let mut python_list = List::new();
-python_list.append_pbool(python_bool);
+python_list.append_back(python_bool);
 print(python_list);
 // assert_eq!(123, 1233);
 ```

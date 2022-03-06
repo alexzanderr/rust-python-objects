@@ -7,18 +7,40 @@ use std::str::Chars;
 use crate::_Object;
 
 #[derive(Clone)]
+/// the struct that handles String and &str
 pub struct _String {
+    /// the core field
     _string: String,
 }
 
 impl _String {
+    /// constructor: creates a new _String struct
     pub fn new() -> _String {
         _String {
             _string: String::new(),
         }
     }
 
-    pub fn from_chars(_chars: Chars) -> Self {
+    #[inline]
+    /// _String.index(0) -> first char
+    pub fn index(
+        &self,
+        _index: usize,
+    ) -> Option<char> {
+        self._string.chars().nth(_index)
+    }
+
+    /// _String.get(0) -> first char
+    pub fn get(
+        &self,
+        _index: usize,
+    ) -> Option<char> {
+        self.index(_index)
+    }
+}
+
+impl From<Chars<'_>> for _String {
+    fn from(_chars: Chars) -> Self {
         let mut allocator = String::new();
         for _char in _chars {
             allocator.push(_char)
@@ -27,15 +49,20 @@ impl _String {
             _string: allocator
         }
     }
+}
 
-    pub fn from_str(_str: &str) -> Self {
+impl From<&str> for _String {
+    fn from(_str: &str) -> Self {
         _String {
             _string: String::from(_str),
         }
     }
-
-    pub fn from_string(_string: String) -> Self {
-        _String { _string }
+}
+impl From<String> for _String {
+    fn from(_string: String) -> Self {
+        _String {
+            _string,
+        }
     }
 }
 
@@ -60,7 +87,10 @@ impl _Object for _String {
 }
 
 impl Display for _String {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+    fn fmt(
+        &self,
+        f: &mut Formatter<'_>,
+    ) -> Result {
         write!(f, "{}", self._string)
     }
 }

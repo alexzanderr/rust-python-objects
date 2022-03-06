@@ -3,7 +3,6 @@
 //! it wasnt visible because this module somehow was private
 //! now its visible
 
-
 #![allow(
     dead_code,
     unused_imports,
@@ -12,7 +11,7 @@
     unused_assignments,
     unused_mut,
     non_snake_case,
-    unused_must_use,
+    unused_must_use
 )]
 
 
@@ -38,8 +37,6 @@ use super::Append;
 
 // mod object;
 // use object::Object;
-
-
 
 
 /// the main component
@@ -73,6 +70,11 @@ impl List {
 }
 
 
+impl Default for List {
+    fn default() -> Self {
+        Self::new()
+    }
+}
 
 
 impl _Object for List {
@@ -91,11 +93,14 @@ impl _Object for List {
 
 
 impl fmt::Display for List {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+    fn fmt(
+        &self,
+        f: &mut fmt::Formatter<'_>,
+    ) -> fmt::Result {
         // if list is empty then we print '[]'
-        if self._list.len() == 0 {
+        if self._list.is_empty() {
             write!(f, "[]");
-            return Ok(())
+            return Ok(());
         }
 
 
@@ -122,11 +127,8 @@ impl fmt::Display for List {
 }
 
 ///
-///
-///
 impl Deref for List {
     type Target = VecDeque<Object>;
-
 
     /// usage
     /// for o in python_list.iter() {
@@ -141,13 +143,14 @@ impl Deref for List {
 impl From<&str> for List {
     fn from(_static_string: &str) -> List {
         List {
-            _list:
-                _static_string.chars()
-                .map(|c| Object::Char(Char::new(c)))
-                .collect()
+            _list: _static_string
+                .chars()
+                .map(|c| Object::Char(Char::from(c)))
+                .collect(),
         }
     }
 }
+
 
 /// creates a list from string
 /// example
@@ -157,10 +160,10 @@ impl From<&str> for List {
 impl From<&String> for List {
     fn from(_string: &String) -> List {
         List {
-            _list:
-                _string.chars()
-                .map(|c| Object::Char(Char::new(c)))
-                .collect()
+            _list: _string
+                .chars()
+                .map(|c| Object::Char(Char::from(c)))
+                .collect(),
         }
     }
 }
@@ -168,16 +171,15 @@ impl From<&String> for List {
 impl From<String> for List {
     fn from(_string: String) -> List {
         List {
-            _list:
-                _string.chars()
-                .map(|c| Object::Char(Char::new(c)))
-                .collect()
+            _list: _string
+                .chars()
+                .map(|c| Object::Char(Char::from(c)))
+                .collect(),
         }
     }
 }
 
 impl From<i32> for List {
-
     // include markdown file as doc comment for this function
     #[doc = include_str!("../../docs/python_list/showcase.md")]
     fn from(_integer: i32) -> List {
@@ -198,11 +200,10 @@ impl From<&List> for List {
             // temp_list.push_back(_object);
         }
         List {
-            _list: temp_list,
+            _list: temp_list
         }
     }
 }
-
 
 
 impl FromStr for List {
@@ -215,9 +216,7 @@ impl FromStr for List {
 
 
 impl FromIterator<i32> for List {
-    fn from_iter<T: IntoIterator<Item = i32>>(
-        _integer_iterator: T
-    ) -> Self {
+    fn from_iter<T: IntoIterator<Item = i32>>(_integer_iterator: T) -> Self {
         let mut integer_list = List::new();
         for integer in _integer_iterator {
             integer_list.append_back(integer);
@@ -228,9 +227,7 @@ impl FromIterator<i32> for List {
 
 
 impl FromIterator<String> for List {
-    fn from_iter<T: IntoIterator<Item = String>>(
-        _string_iterator: T
-    ) -> Self {
+    fn from_iter<T: IntoIterator<Item = String>>(_string_iterator: T) -> Self {
         let mut string_list = List::new();
         for _string in _string_iterator {
             string_list.append_back(_string);

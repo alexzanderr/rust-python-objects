@@ -2,6 +2,9 @@
 ![logo](https://github.com/alexzanderr/rust-python-objects/blob/main/static/img/logo/rust-python-objects-logo.png?raw=True)
 
 <p align="center">
+    <a href="https://crates.io/crates/python-objects">
+        <img src="https://img.shields.io/crates/v/python-objects.svg" alt="Crates.io">
+    </a>
     <a href="https://choosealicense.com/licenses/mit/" alt="License: MIT">
         <img src="https://img.shields.io/badge/license-MIT-green.svg" />
     </a>
@@ -40,6 +43,8 @@ check [`TODO.md`](https://github.com/alexzanderr/rust-python-objects/blob/main/T
 check [`CONTRIBUTING.md`](https://github.com/alexzanderr/rust-python-objects/blob/main/CONTRIBUTING.md
 )
 
+# CHANGELOG
+- [`0.0.5`](https://github.com/alexzanderr/rust-python-objects/blob/main/changelog/0.0.5.md)
 
 # NOTE
 

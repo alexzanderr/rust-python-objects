@@ -1,5 +1,3 @@
-
-
 use std::ops;
 use std::ops::Index;
 use std::string;
@@ -31,7 +29,6 @@ fn main() {
     color_backtrace::install();
 
 
-
     let string = String::from("📦 📦 📦");
     // println!("{:?}", string.get(0));
     println!("{}", &string[0..4]);
@@ -40,6 +37,4 @@ fn main() {
 
     // println!("{:?}", string[0]);
     // println!("{:?}", string.index(0));
-
-
 }

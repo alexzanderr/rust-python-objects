@@ -1,4 +1,3 @@
-
 #![allow(
     dead_code,
     unused_imports,
@@ -7,7 +6,7 @@
     unused_assignments,
     unused_mut,
     non_snake_case,
-    unused_must_use,
+    unused_must_use
 )]
 
 
@@ -27,16 +26,18 @@ use crate::Object;
 // use crate::_Object;
 
 
-
 // TODO implement hash trait for object
+/// Dict struct that represents the python dict
 pub struct Dict {
-    _dict: HashMap<Object, Object>
+    /// hashmap of object and object
+    _dict: HashMap<Object, Object>,
 }
 
 impl Dict {
+    /// creates a new empty python dict
     pub fn new() -> Dict {
         Dict {
-            _dict: HashMap::new()
+            _dict: HashMap::new(),
         }
     }
 
@@ -45,11 +46,20 @@ impl Dict {
     // }
 }
 
+impl Default for Dict {
+    fn default() -> Self {
+        Dict::new()
+    }
+}
+
 impl Display for Dict {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+    fn fmt(
+        &self,
+        f: &mut Formatter<'_>,
+    ) -> Result {
         for (key, value) in self._dict.iter() {
             write!(f, "{}: {}", key, value);
         }
-        write!(f, "\n")
+        writeln!(f)
     }
 }

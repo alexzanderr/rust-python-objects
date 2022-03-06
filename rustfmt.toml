@@ -1,0 +1,34 @@
+
+# https://rust-lang.github.io/rustfmt/?version=v1.4.38&search=
+
+blank_lines_upper_bound = 2
+brace_style = "PreferSameLine"
+edition = "2021"
+empty_item_single_line = false
+fn_args_layout = "Vertical"
+format_code_in_doc_comments = true
+
+imports_layout = "Vertical"
+
+# adds comma to match block
+match_block_trailing_comma = true
+max_width = 80
+merge_derives = false
+newline_style = "Unix"
+
+# /* sit amet: */ converts this comment into // single line
+normalize_comments = true
+remove_nested_parens = true
+reorder_impl_items = true
+reorder_imports = false
+reorder_modules = false
+
+
+# struct Foo {
+#     x:   u32,
+#     yy:  u32,
+#     zzz: u32,
+# }
+struct_field_align_threshold = 20
+struct_lit_single_line = false
+# trailing_comma = "Vertical"

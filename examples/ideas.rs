@@ -1,13 +1,10 @@
-
-
-
 #![allow(
     dead_code,
     unused_imports,
     unused_variables,
     unused_macros,
     unused_assignments,
-    unused_mut,
+    unused_mut
 )]
 
 use std::collections::VecDeque;
@@ -26,9 +23,9 @@ fn are_you_on_linux() {
     println!("You are *not* running linux!");
 }
 
-fn const_generics<const T: usize>(_x: T) {
-    println!("{}", _x)
-}
+// fn const_generics<const T: usize>(_x: T) {
+//     println!("{}", _x)
+// }
 
 fn main() {
     color_backtrace::install();
@@ -41,5 +38,3 @@ fn main() {
         println!("Yes. It's definitely *not* linux!");
     }
 }
-
-

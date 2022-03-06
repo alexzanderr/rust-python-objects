@@ -1,6 +1,3 @@
-
-
-
 mod list;
 mod append;
 mod append_front;

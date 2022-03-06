@@ -26,7 +26,7 @@ fn main() {
     python_list.append_front("hello");
     python_list.append_back(123);
     // append a list
-    python_list.append_back(List::from(List::from(String::from("working"))));
+    python_list.append_back(List::from(String::from("working")));
     // note that the python list supports another python list inside
 
     // append a float
@@ -43,7 +43,7 @@ fn main() {
     // note that this _String is from this crate
     // its the struct that handles the String and &str data types
     python_list.append_back(
-        _String::from_string(
+        _String::from(
             String::from("python string")));
 
     // append a python bool

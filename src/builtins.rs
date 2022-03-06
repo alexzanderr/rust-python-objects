@@ -1,7 +1,3 @@
-
-
-
-
 use std::fmt;
 use std::any::type_name;
 
@@ -28,6 +24,7 @@ pub fn repr<T: _Object>(_object: &T) -> String {
     _object.__repr__()
 }
 
+/// get the type of an object
 pub fn type_of<T>(_: &T) -> &str {
     type_name::<T>()
 }
