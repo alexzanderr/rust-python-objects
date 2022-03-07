@@ -20,14 +20,15 @@ have the `simplicity` and `performance` together.
 be happy.
 
 
-## Table of Contents
+# Table of Contents
 - [Table of Contents](#table-of-contents)
-  - [Showcases](#showcases)
-  - [Install](#install)
-  - [TODO](#todo)
-  - [Contributing](#contributing)
-  - [Changelog](#changelog)
-  - [NOTE](#note)
+    - [Showcases](#showcases)
+    - [Install](#install)
+    - [Documentation](#documentation)
+    - [TODO](#todo)
+    - [Contributing](#contributing)
+    - [Changelog](#changelog)
+    - [NOTE](#note)
 
 
 # Showcases
@@ -57,6 +58,9 @@ and this will add the `latest version` from `crates.io` to your `Cargo.toml`, ju
 - how to install it ? -> `cargo install cargo-edit`
 - what is [`cargo-edit`](https://github.com/killercup/cargo-edit) ? -> its a rust package that adds useful sub commands for cargo that are not `built-in`
 
+# Documentation
+- [`docs.rs/python-objects`](https://docs.rs/python-objects/latest/python/)
+- [`the-book`](https://alexzanderr.github.io/rust-python-objects/index.html)
 
 # why ?
 why not. because python concepts are very cool, but python is slow..
@@ -79,8 +83,18 @@ check [`CONTRIBUTING.md`](https://github.com/alexzanderr/rust-python-objects/blo
 # Changelog
 check [`CHANGELOG.md`](https://github.com/alexzanderr/rust-python-objects/blob/main/changelog/CHANGELOG.md)
 
+# Crates that use Python-Objects
+incoming, would be nice.
+
 # NOTE
 note for the user and developer
+
+if you find `issues` go ahead and make an
+[`issue`](https://github.com/alexzanderr/rust-python-objects/issues/new)
+or a
+[`pull request`](https://github.com/alexzanderr/rust-python-objects/compare),
+cant wait to take a look into them.
+
 
 right now this project is very minimal, it will grow, the idea just came to my mind some days ago (on 21.02.2022) and the first implementation was done at 4 AM (23.02.2022) with some adrenaline.
 

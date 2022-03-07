@@ -5,14 +5,15 @@ blank_lines_upper_bound = 2
 brace_style = "PreferSameLine"
 edition = "2021"
 empty_item_single_line = false
-fn_args_layout = "Vertical"
+fn_args_layout = "Tall"
 format_code_in_doc_comments = true
 
 imports_layout = "Vertical"
 
 # adds comma to match block
 match_block_trailing_comma = true
-max_width = 80
+max_width = 70
+chain_width = 70
 merge_derives = false
 newline_style = "Unix"
 

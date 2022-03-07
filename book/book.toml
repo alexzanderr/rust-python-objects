@@ -1,6 +1,7 @@
 
 [book]
 authors = ["alexzanderr <alexzander.dot.dev@gmail.com>"]
+description = "rust-python-objects book that contains documentation and examples"
 language = "en"
 multilingual = false
 src = "src"

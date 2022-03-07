@@ -60,6 +60,7 @@ format:
 cti:
 	cargo build
 	cargo test
-	cargo doc --open --document-private-items
+	cargo doc --document-private-items
 	cargo clippy -- -D warnings
-	cargo fmt --all -- --check
+	cargo fmt
+# 	cargo fmt --all -- --check

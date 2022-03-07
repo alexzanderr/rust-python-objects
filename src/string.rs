@@ -23,18 +23,12 @@ impl _String {
 
     #[inline]
     /// _String.index(0) -> first char
-    pub fn index(
-        &self,
-        _index: usize,
-    ) -> Option<char> {
+    pub fn index(&self, _index: usize) -> Option<char> {
         self._string.chars().nth(_index)
     }
 
     /// _String.get(0) -> first char
-    pub fn get(
-        &self,
-        _index: usize,
-    ) -> Option<char> {
+    pub fn get(&self, _index: usize) -> Option<char> {
         self.index(_index)
     }
 }
@@ -87,10 +81,7 @@ impl _Object for _String {
 }
 
 impl Display for _String {
-    fn fmt(
-        &self,
-        f: &mut Formatter<'_>,
-    ) -> Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         write!(f, "{}", self._string)
     }
 }

@@ -53,10 +53,7 @@ pub enum Object {
 
 
 impl Display for Object {
-    fn fmt(
-        &self,
-        f: &mut Formatter<'_>,
-    ) -> Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         // why there is &* ?
         // it works without both..
         match &*self {

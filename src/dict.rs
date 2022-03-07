@@ -53,10 +53,7 @@ impl Default for Dict {
 }
 
 impl Display for Dict {
-    fn fmt(
-        &self,
-        f: &mut Formatter<'_>,
-    ) -> Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         for (key, value) in self._dict.iter() {
             write!(f, "{}: {}", key, value);
         }

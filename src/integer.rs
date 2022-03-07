@@ -31,7 +31,8 @@ impl From<&str> for Int {
     fn from(_static_string: &str) -> Self {
         let mut _integer: i32 = 0;
         for _char in _static_string.chars() {
-            _integer = _integer * 10 + _char.to_digit(10).unwrap() as i32;
+            _integer =
+                _integer * 10 + _char.to_digit(10).unwrap() as i32;
         }
         Int {
             _integer,
@@ -54,10 +55,7 @@ impl _Object for Int {
 }
 
 impl Display for Int {
-    fn fmt(
-        &self,
-        f: &mut Formatter<'_>,
-    ) -> Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         write!(f, "{}", self._integer)
     }
 }

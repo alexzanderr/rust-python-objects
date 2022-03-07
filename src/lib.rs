@@ -1,6 +1,10 @@
+
 #![doc = include_str!("../docs/python.md")]
 #![doc = include_str!("../docs/python_list/showcase.md")]
-#![warn(missing_docs)]
+
+#![deny(missing_docs)]
+#![deny(dead_code)]
+
 #![allow(clippy::module_inception)]
 #![allow(clippy::useless_format)]
 
@@ -14,6 +18,7 @@ mod dict;
 mod builtins;
 mod boolean;
 mod list;
+mod iterable;
 
 
 pub use integer::Int;
@@ -24,10 +29,16 @@ pub use object::Object;
 pub use object::_Object;
 pub use boolean::Bool;
 pub use dict::Dict;
+pub use iterable::Iterable;
 
 
 // builtins.rs
-pub use builtins::*;
+pub use builtins::print;
+pub use builtins::repr;
+pub use builtins::type_of;
+pub use builtins::len;
+pub use builtins::_str;
+pub use builtins::max;
 
 
 pub use list::List;

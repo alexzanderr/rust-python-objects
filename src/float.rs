@@ -100,10 +100,7 @@ impl _Object for Float<f64> {
 
 
 impl fmt::Display for Float<f32> {
-    fn fmt(
-        &self,
-        formatter: &mut fmt::Formatter<'_>,
-    ) -> fmt::Result {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
         let _type = type_of(&self._float);
         if formatter.alternate() {
             write!(formatter, "{} -> <{}>", self.__str__(), _type)
@@ -114,10 +111,7 @@ impl fmt::Display for Float<f32> {
 }
 
 impl fmt::Display for Float<f64> {
-    fn fmt(
-        &self,
-        formatter: &mut fmt::Formatter<'_>,
-    ) -> fmt::Result {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
         let _type = type_of(&self._float);
         if formatter.alternate() {
             write!(formatter, "{} -> <{}>", self.__str__(), _type)
@@ -134,10 +128,7 @@ impl<T> fmt::Debug for Float<T>
 where
     T: Sized + fmt::Display,
 {
-    fn fmt(
-        &self,
-        f: &mut fmt::Formatter<'_>,
-    ) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         // https://doc.rust-lang.org/std/fmt/struct.Formatter.html#method.alternate
         let _type = type_of(&self._float);
 
@@ -151,7 +142,11 @@ where
             let _fmt = _fmt.unindent();
             write!(f, "{}", _fmt)
         } else {
-            write!(f, "Float<{}> {{ _float: {} }}", _type, self._float)
+            write!(
+                f,
+                "Float<{}> {{ _float: {} }}",
+                _type, self._float
+            )
         }
     }
 }

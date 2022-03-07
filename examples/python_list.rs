@@ -65,7 +65,8 @@ fn main() {
     // append a python string
     // note that this _String is from this crate
     // its the struct that handles the String and &str data types
-    python_list.append_back(_String::from(String::from("python string")));
+    python_list
+        .append_back(_String::from(String::from("python string")));
 
     // append a python bool
     // note that Bool is the python struct that handles rust's bool
@@ -90,6 +91,12 @@ fn main() {
         print(o)
     }
 
+    print("\n");
+    print("----");
+    print(python_list.__str__());
+    print("----");
+    print("\n");
+
     // create a python from parsing a static string
     let list_from_str = "123123".parse::<List>().unwrap();
     print(&list_from_str);
@@ -101,6 +108,10 @@ fn main() {
     // create a python list from rust iterator
     let list_from_iterator = iter.collect::<List>();
     print(&list_from_iterator);
+
+
+    print(repr(&python_list));
+    print(repr(&list_from_iterator));
 
     // let oo = Object::Int(Int::new(123));
     // println!("{}", oo);

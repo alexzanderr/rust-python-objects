@@ -31,9 +31,12 @@ use crate::Float;
 use crate::_String;
 use crate::Char;
 use crate::Bool;
+use crate::print;
+use crate::type_of;
 
 
 use super::Append;
+use crate::Iterable;
 
 // mod object;
 // use object::Object;
@@ -55,6 +58,14 @@ pub struct List {
     pub _list: VecDeque<Object>,
 }
 
+/// if you want to use max(&list) you need the impl for &List
+/// how comes that for Object work by default
+impl Iterable for &List {
+    fn __iter__(&self) -> usize {
+        8
+    }
+}
+
 
 /// its implementation
 impl List {
@@ -65,8 +76,23 @@ impl List {
         }
     }
 
-    // TODO
-    // make an iterator for List and extract object from it
+    /// check whether or not its a char or string type inside list
+    /// designed and created for __repr__
+    fn _contains_char_or_string(&self) -> bool {
+        for _object in &self._list {
+            match _object {
+                Object::String(_object) => {
+                    return true;
+                },
+                Object::Char(_object) => {
+                    return true;
+                },
+                _ => {},
+            }
+        }
+        false
+    }
+
 }
 
 
@@ -82,21 +108,85 @@ impl _Object for List {
         self._list.len()
     }
 
+    // >>>  x = ['hello', '1', '2', '3', '1', '2', '3', 123, 123, ['w', 'o', 'r', 'k', 'i', 'n', 'g'], 123.123, 123.123, 123.123, 'asdasd', ['s', 'o', 'm', 'e', 't', 'h', 'i', 'n',
+    // ... 'g'], 'python string', True, False, False]
+    // >>> x
+    // ['hello', '1', '2', '3', '1', '2', '3', 123, 123, ['w', 'o', 'r', 'k', 'i', 'n', 'g'], 123.123, 123.123, 123.123, 'asdasd', ['s', 'o', 'm', 'e', 't', 'h', 'i', 'n', 'g'], 'python string', True, False, False]
+    // >>> repr(x)
+    // "['hello', '1', '2', '3', '1', '2', '3', 123, 123, ['w', 'o', 'r', 'k', 'i', 'n', 'g'], 123.123, 123.123, 123.123, 'asdasd', ['s', 'o', 'm', 'e', 't', 'h', 'i', 'n', 'g'], 'python string', True, False, False]"
+    // >>> repr(["asd"])
+    // "['asd']"
+    // >>> repr(['asd'])
+    // "['asd']"
+    // >>> repr([123, 123])
+    // '[123, 123]'
+
+    /// rules for __repr__
+    /// daca nu ai string or char -> '[]' (single quotes outsiode)
+    /// daca ai string or char -> "[]" (double quotes outside)
     fn __repr__(&self) -> String {
-        String::from("unimplemented")
+        if self._contains_char_or_string() {
+            format!("\"{}\"", self.__str__())
+        } else {
+            format!("'{}'", self.__str__())
+        }
     }
 
+    /// __str__ documentation in List
     fn __str__(&self) -> String {
-        String::from("unimplemented")
+        // if list is empty then we print '[]'
+        if self._list.is_empty() {
+            return String::from("[]");
+        }
+
+
+        let mut string_representation = String::new();
+        let zero = self._list.get(0).unwrap();
+        // print the first element of the list
+        match zero {
+            Object::String(_object) => {
+                string_representation.push_str(
+                    format!("[{}", _object.__repr__()).as_str(),
+                );
+            },
+            Object::Char(_object) => {
+                string_representation.push_str(
+                    format!("[{}", _object.__repr__()).as_str(),
+                );
+            },
+            _ => {
+                string_representation
+                    .push_str(format!("[{}", zero).as_str());
+            },
+        };
+
+        // print the other elements of the list but from index = 1
+        for _object in self._list.iter().skip(1) {
+            match _object {
+                Object::String(_object) => {
+                    string_representation.push_str(
+                        format!(", {}", _object.__repr__()).as_str(),
+                    );
+                },
+                Object::Char(_object) => {
+                    string_representation.push_str(
+                        format!(", {}", _object.__repr__()).as_str(),
+                    );
+                },
+                _ => {
+                    string_representation
+                        .push_str(format!(", {}", _object).as_str());
+                },
+            };
+        }
+        string_representation.push(']');
+        string_representation
     }
 }
 
 
 impl fmt::Display for List {
-    fn fmt(
-        &self,
-        f: &mut fmt::Formatter<'_>,
-    ) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         // if list is empty then we print '[]'
         if self._list.is_empty() {
             write!(f, "[]");
@@ -115,8 +205,12 @@ impl fmt::Display for List {
         // print the other elements of the list but from index = 1
         for _object in self._list.iter().skip(1) {
             match _object {
-                Object::String(obj) => write!(f, ", {}", obj.__repr__()),
-                Object::Char(obj) => write!(f, ", {}", obj.__repr__()),
+                Object::String(obj) => {
+                    write!(f, ", {}", obj.__repr__())
+                },
+                Object::Char(obj) => {
+                    write!(f, ", {}", obj.__repr__())
+                },
                 _ => write!(f, ", {}", _object),
             };
 
@@ -216,7 +310,9 @@ impl FromStr for List {
 
 
 impl FromIterator<i32> for List {
-    fn from_iter<T: IntoIterator<Item = i32>>(_integer_iterator: T) -> Self {
+    fn from_iter<T: IntoIterator<Item = i32>>(
+        _integer_iterator: T,
+    ) -> Self {
         let mut integer_list = List::new();
         for integer in _integer_iterator {
             integer_list.append_back(integer);
@@ -227,7 +323,9 @@ impl FromIterator<i32> for List {
 
 
 impl FromIterator<String> for List {
-    fn from_iter<T: IntoIterator<Item = String>>(_string_iterator: T) -> Self {
+    fn from_iter<T: IntoIterator<Item = String>>(
+        _string_iterator: T,
+    ) -> Self {
         let mut string_list = List::new();
         for _string in _string_iterator {
             string_list.append_back(_string);

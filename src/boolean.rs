@@ -44,10 +44,7 @@ impl _Object for Bool {
 }
 
 impl Display for Bool {
-    fn fmt(
-        &self,
-        formatter: &mut Formatter<'_>,
-    ) -> Result {
+    fn fmt(&self, formatter: &mut Formatter<'_>) -> Result {
         write!(formatter, "{}", self.__str__())
     }
 }

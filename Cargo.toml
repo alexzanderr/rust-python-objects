@@ -13,6 +13,8 @@ documentation = "https://docs.rs/python-objects"
 readme = "README.md"
 keywords = ["python", "objects", "python-objects"]
 
+exclude = ["book/*"]
+
 # use this
 # https://crates.io/category_slugs
 categories = ["data-structures"]

@@ -54,10 +54,7 @@ impl _Object for Char {
 }
 
 impl Display for Char {
-    fn fmt(
-        &self,
-        formatter: &mut Formatter<'_>,
-    ) -> Result {
+    fn fmt(&self, formatter: &mut Formatter<'_>) -> Result {
         if formatter.alternate() {
             write!(formatter, "'{}'", self._char)
         } else {
