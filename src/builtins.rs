@@ -49,6 +49,8 @@ pub fn type_of<T>(_: &T) -> &str {
 }
 
 /// the maximum from an iterable
-pub fn max<IterableType: Iterable>(_iterable: IterableType) -> Object {
+pub fn max<IterableType: Iterable>(
+    _iterable: IterableType,
+) -> Object {
     Object::Int(Int::new(123))
 }

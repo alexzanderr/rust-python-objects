@@ -1,8 +1,6 @@
-
 use python::*;
 
 fn main() {
-
     let mut l = List::new();
     l.append_back(123);
     l.append_back(123);

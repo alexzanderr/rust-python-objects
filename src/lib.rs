@@ -1,10 +1,7 @@
-
 #![doc = include_str!("../docs/python.md")]
 #![doc = include_str!("../docs/python_list/showcase.md")]
-
 #![deny(missing_docs)]
 #![deny(dead_code)]
-
 #![allow(clippy::module_inception)]
 #![allow(clippy::useless_format)]
 
