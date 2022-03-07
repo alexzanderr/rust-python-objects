@@ -77,7 +77,7 @@ check [`CONTRIBUTING.md`](https://github.com/alexzanderr/rust-python-objects/blo
 )
 
 # Changelog
-check [`CHANGELOG.md`](./changelog/CHANGELOG.md)
+check [`CHANGELOG.md`](https://github.com/alexzanderr/rust-python-objects/blob/main/changelog/CHANGELOG.md)
 
 # NOTE
 note for the user and developer
