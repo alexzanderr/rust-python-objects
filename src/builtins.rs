@@ -1,6 +1,7 @@
 use std::fmt;
 use std::any::type_name;
 
+
 // use crate::Object;
 use crate::_Object;
 use crate::Object;
@@ -13,9 +14,15 @@ pub fn print<T: fmt::Display>(arg: T) {
 }
 
 /// print(object);
-// pub fn printd<T: Display>(arg: T) {
-//     println!("{:?}", arg);
-// }
+pub fn printd<T: fmt::Debug>(arg: T) {
+    println!("{:?}", arg);
+}
+
+
+/// print(object);
+pub fn dprint<T: fmt::Debug>(arg: T) {
+    dbg!("{}", arg);
+}
 
 /// len(object);
 pub fn len<T: _Object>(_object: &T) -> usize {

@@ -33,7 +33,12 @@ pub use iterable::Iterable;
 
 
 // builtins.rs
+// simple print
 pub use builtins::print;
+// print with debug
+pub use builtins::printd;
+// debug print dbg! macro
+pub use builtins::dprint;
 pub use builtins::repr;
 pub use builtins::type_of;
 pub use builtins::len;
