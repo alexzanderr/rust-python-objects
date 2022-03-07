@@ -6,7 +6,9 @@ use crate::_Object;
 
 
 /// Bool structure for True and False
-#[derive(Copy, Clone)]
+#[derive(Copy)]
+#[derive(Clone)]
+#[derive(Default)]
 pub struct Bool {
     _bool: bool,
 }
@@ -44,8 +46,8 @@ impl _Object for Bool {
 impl Display for Bool {
     fn fmt(
         &self,
-        f: &mut Formatter<'_>,
+        formatter: &mut Formatter<'_>,
     ) -> Result {
-        write!(f, "{}", self.__str__())
+        write!(formatter, "{}", self.__str__())
     }
 }

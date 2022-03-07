@@ -20,9 +20,42 @@ have the `simplicity` and `performance` together.
 be happy.
 
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+  - [Showcases](#showcases)
+  - [Install](#install)
+  - [TODO](#todo)
+  - [Contributing](#contributing)
+  - [Changelog](#changelog)
+  - [NOTE](#note)
+
+
 # Showcases
+first you need to see the showcases to convince you to install it.
+
 1. [`python-list`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list/showcase.md)
 2. [`python-dict`] -> incoming
+
+# Install
+`1. the old way`
+
+just copy the crate name and the version you want to use:
+```toml
+python-objects = "0.0.5"
+```
+to your `Cargo.toml` and then write some code and build it.
+
+`2. the modern and simple way`
+
+just run this command
+```shell
+cargo add python-objects
+```
+and this will add the `latest version` from `crates.io` to your `Cargo.toml`, just like the old way, but automatically.
+
+- what is `cargo add` ? -> its a cargo sub command
+- how to install it ? -> `cargo install cargo-edit`
+- what is [`cargo-edit`](https://github.com/killercup/cargo-edit) ? -> its a rust package that adds useful sub commands for cargo that are not `built-in`
 
 
 # why ?
@@ -39,15 +72,14 @@ so we are getting python objects in rust with `performance` and `simplity`.
 check [`TODO.md`](https://github.com/alexzanderr/rust-python-objects/blob/main/TODO.md)
 
 
-# CONTRIBUTING
+# Contributing
 check [`CONTRIBUTING.md`](https://github.com/alexzanderr/rust-python-objects/blob/main/CONTRIBUTING.md
 )
 
-# CHANGELOG
-- [`0.0.5`](https://github.com/alexzanderr/rust-python-objects/blob/main/changelog/0.0.5.md)
+# Changelog
+check [`CHANGELOG.md`](./changelog/CHANGELOG.md)
 
 # NOTE
-
 note for the user and developer
 
 right now this project is very minimal, it will grow, the idea just came to my mind some days ago (on 21.02.2022) and the first implementation was done at 4 AM (23.02.2022) with some adrenaline.
