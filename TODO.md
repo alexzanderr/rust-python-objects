@@ -11,7 +11,7 @@ great todos for improvement
 - [ ] make an iterator for List and extract object from it
 - [ ] implement `max()` | `min()` for `List`
 - [ ] implement `PartialEq` for `List`
-- [ ]
+- [ ] remove the `__len__()` from `_Object` trait and from all its implementations
 - [ ]
 - [ ]
 - [ ]

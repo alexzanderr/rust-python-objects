@@ -10,7 +10,7 @@ pub fn type_of<T>(_: &T) -> &str {
 /// the supreme _Object trait
 /// that its derived types should
 /// implement like all the __functions__ from python
-pub trait _Object<T> {
+pub trait _Object {
     /// python repr(object)
     fn __repr__(&self) -> String;
     /// python len(object)
@@ -52,7 +52,7 @@ where T: Sized
 
 
 
-impl<T> _Object<T> for Float<T>
+impl<T> _Object for Float<T>
 where T: Sized + fmt::Display
 {
     #[inline]

@@ -12,6 +12,7 @@
 
 use python::Int;
 use python::print;
+use python::printd;
 
 fn main() {
     let int32: i32 = 123;
@@ -26,6 +27,8 @@ fn main() {
     let int16 = Int::from(1i16);
     print(int8);
     print(int16);
+
+    printd(int8);
 
     print(int32);
     print(int64);

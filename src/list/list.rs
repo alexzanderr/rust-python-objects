@@ -61,7 +61,10 @@ pub struct List {
 
 /// if you want to use max(&list) you need the impl for &List
 /// how comes that for Object work by default
-impl Iterable for &List {
+impl Iterable for List {
+    fn __len__(&self) -> usize {
+        self._list.len()
+    }
 }
 
 

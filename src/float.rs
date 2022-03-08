@@ -1,3 +1,4 @@
+
 #![allow(unused_imports)]
 
 use std::fmt;
@@ -60,13 +61,15 @@ impl Default for Float<f64> {
 }
 
 
-impl _Object for Float<f32> {
+impl<T> _Object for Float<T>
+where T: Sized + fmt::Display
+{
     fn __repr__(&self) -> String {
         format!("{}", self._float)
     }
 
     fn __len__(&self) -> usize {
-        self._float as usize
+        unimplemented!()
     }
 
     fn __str__(&self) -> String {
@@ -74,19 +77,6 @@ impl _Object for Float<f32> {
     }
 }
 
-impl _Object for Float<f64> {
-    fn __repr__(&self) -> String {
-        format!("{}", self._float)
-    }
-
-    fn __len__(&self) -> usize {
-        self._float as usize
-    }
-
-    fn __str__(&self) -> String {
-        format!("{}", self._float)
-    }
-}
 
 
 /// T cannot be formatted with the default formatter

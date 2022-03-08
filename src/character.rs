@@ -1,6 +1,5 @@
-use std::fmt::Display;
-use std::fmt::Formatter;
-use std::fmt::Result;
+
+use std::fmt;
 
 
 use crate::_Object;
@@ -39,7 +38,8 @@ impl Default for Char {
     }
 }
 
-impl _Object for Char {
+impl _Object for Char
+{
     fn __str__(&self) -> String {
         String::from(self._char)
     }
@@ -53,8 +53,8 @@ impl _Object for Char {
     }
 }
 
-impl Display for Char {
-    fn fmt(&self, formatter: &mut Formatter<'_>) -> Result {
+impl fmt::Display for Char {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
         if formatter.alternate() {
             write!(formatter, "'{}'", self._char)
         } else {

@@ -2,6 +2,7 @@
 
 use std::fmt;
 use crate::_Object;
+use crate::type_of;
 
 /// Int struct, holds and _integer: i32
 #[derive(Copy)]
@@ -116,27 +117,15 @@ where T: Sized
     }
 }
 
-impl _Object for Int<i32> {
+impl<T> _Object for Int<T>
+where T: Sized + fmt::Display
+{
     fn __repr__(&self) -> String {
         format!("{}", self._integer)
     }
 
     fn __len__(&self) -> usize {
-        self._integer as usize
-    }
-
-    fn __str__(&self) -> String {
-        format!("{}", self._integer)
-    }
-}
-
-impl _Object for Int<i64> {
-    fn __repr__(&self) -> String {
-        format!("{}", self._integer)
-    }
-
-    fn __len__(&self) -> usize {
-        self._integer as usize
+        unimplemented!()
     }
 
     fn __str__(&self) -> String {
@@ -152,9 +141,21 @@ where T: Sized + fmt::Display
     }
 }
 
+impl<T> fmt::Debug for Int<T>
+where T: Sized + fmt::Debug + fmt::Display
+{
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let _type = type_of(&self._integer);
+        write!(f, "Int<{}> {{ _integer: {} }}", _type, self._integer)
+    }
+}
 
 
-impl PartialEq for Int<i32> {
+
+
+impl<T> PartialEq for Int<T>
+where T: Sized + PartialEq
+{
     fn eq(&self, other: &Self) -> bool {
         self._integer == other._integer
     }
@@ -164,13 +165,3 @@ impl PartialEq for Int<i32> {
     }
 }
 
-
-impl PartialEq for Int<i64> {
-    fn eq(&self, other: &Self) -> bool {
-        self._integer == other._integer
-    }
-
-    fn ne(&self, other: &Self) -> bool {
-        self._integer != other._integer
-    }
-}

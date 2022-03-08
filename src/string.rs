@@ -1,7 +1,5 @@
-use std::fmt::Display;
-use std::fmt::Formatter;
-use std::fmt::Result;
-// use std::ops::Index;
+
+use std::fmt;// use std::ops::Index;
 use std::str::Chars;
 
 use crate::_Object;
@@ -80,8 +78,8 @@ impl _Object for _String {
     }
 }
 
-impl Display for _String {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+impl fmt::Display for _String {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "{}", self._string)
     }
 }
