@@ -34,7 +34,7 @@ pub trait Append<T>: Sized {
 /// [123, 123, 123, 123, 123, 123, 123]
 impl Append<i32> for List {
     fn append_back(&mut self, _integer: i32) -> &mut Self {
-        self._list.push_back(Object::Int(Int::new(_integer)));
+        self._list.push_back(Object::Int32(Int::new(_integer)));
         self
     }
 }
@@ -55,9 +55,9 @@ impl Append<Float<f64>> for List {
 
 
 impl Append<&str> for List {
-    fn append_back(&mut self, _static_string: &str) -> &mut Self {
+    fn append_back(&mut self, _str: &str) -> &mut Self {
         self._list
-            .push_back(Object::String(_String::from(_static_string)));
+            .push_back(Object::String(_String::from(_str)));
         self
     }
 }

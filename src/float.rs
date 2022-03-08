@@ -18,40 +18,30 @@ pub struct Float<T: Sized> {
     _float: T,
 }
 
-// impl<T> Float<T>
-// where T: Sized
-// {
-//     pub fn new() -> Float<T> {
-//         Float {
-//             _float: 0.0f32
-//         }
-//     }
-// }
 
-// impl Float<f64>
-// {
-//     pub fn new() -> Float<f64> {
-//         Float {
-//             _float: 0.0f64
-//         }
-//     }
-// }
+impl<T> Float<T>
+where T: Sized
+{
+    /// constructor
+    /// creates a Float object from any float (f32, f64)
+    pub fn new(_float: T) -> Self {
+        Float {
+            _float
+        }
+    }
+}
 
-impl From<f32> for Float<f32> {
-    fn from(_float: f32) -> Self {
+impl<T> From<T> for Float<T>
+where T: Sized
+{
+    fn from(_float: T) -> Self {
         Float {
             _float,
         }
     }
 }
 
-impl From<f64> for Float<f64> {
-    fn from(_float: f64) -> Self {
-        Float {
-            _float,
-        }
-    }
-}
+
 
 impl Default for Float<f32> {
     fn default() -> Self {
@@ -99,24 +89,17 @@ impl _Object for Float<f64> {
 }
 
 
-impl fmt::Display for Float<f32> {
+/// T cannot be formatted with the default formatter
+/// thats why there are implementations for every float possible
+impl<T> fmt::Display for Float<T>
+where T: Sized + fmt::Display
+{
     fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
         let _type = type_of(&self._float);
         if formatter.alternate() {
-            write!(formatter, "{} -> <{}>", self.__str__(), _type)
+            write!(formatter, "{} -> <{}>", self._float, _type)
         } else {
-            write!(formatter, "{}", self.__str__())
-        }
-    }
-}
-
-impl fmt::Display for Float<f64> {
-    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
-        let _type = type_of(&self._float);
-        if formatter.alternate() {
-            write!(formatter, "{} -> <{}>", self.__str__(), _type)
-        } else {
-            write!(formatter, "{}", self.__str__())
+            write!(formatter, "{}", self._float)
         }
     }
 }

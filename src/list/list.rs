@@ -24,6 +24,7 @@ use std::error;
 use std::ops::Deref;
 use std::str::FromStr;
 
+
 use crate::_Object;
 use crate::Object;
 use crate::Int;
@@ -31,8 +32,8 @@ use crate::Float;
 use crate::_String;
 use crate::Char;
 use crate::Bool;
-use crate::print;
 use crate::type_of;
+use crate::print;
 
 
 use super::Append;
@@ -62,6 +63,28 @@ pub struct List {
 /// how comes that for Object work by default
 impl Iterable for &List {
 }
+
+
+// TODO implement PartialEq for List
+// impl PartialEq for List {
+//     fn eq(&self, _List: &Self) -> bool {
+//         for (o1, o2) in _List._list.iter().zip() {
+//             if o1 == o2 {
+//                 true
+//             }
+//         }
+//         false
+//     }
+
+//     fn ne(&self, other: &Self) -> bool {
+//         for (o1, o2) in _List._list.iter().zip() {
+//             if o1 != o2 {
+//                 true
+//             }
+//         }
+//         false
+//     }
+// }
 
 
 /// its implementation
@@ -274,7 +297,7 @@ impl From<i32> for List {
     #[doc = include_str!("../../docs/python_list/showcase.md")]
     fn from(_integer: i32) -> List {
         let mut vector_deque = VecDeque::new();
-        vector_deque.push_back(Object::Int(Int::new(_integer)));
+        vector_deque.push_back(Object::Int32(Int::<i32>::new(_integer)));
         List {
             _list: vector_deque,
         }

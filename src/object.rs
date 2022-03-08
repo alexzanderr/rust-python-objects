@@ -37,8 +37,10 @@ pub trait _Object {
 pub enum Object {
     /// char object
     Char(Char),
-    /// int object
-    Int(Int),
+    /// int32 object
+    Int32(Int<i32>),
+    /// int64 object
+    Int64(Int<i64>),
     /// float32 object
     Float32(Float<f32>),
     /// float64 object
@@ -58,7 +60,8 @@ impl Display for Object {
         // it works without both..
         match &*self {
             Object::Char(_char) => write!(f, "{}", _char),
-            Object::Int(_int) => write!(f, "{}", _int),
+            Object::Int32(_int) => write!(f, "{}", _int),
+            Object::Int64(_int) => write!(f, "{}", _int),
             Object::Float32(_float) => write!(f, "{}", _float),
             Object::Float64(_float) => write!(f, "{}", _float),
             Object::String(_string) => write!(f, "{}", _string),

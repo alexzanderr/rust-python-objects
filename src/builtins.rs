@@ -52,5 +52,5 @@ pub fn type_of<T>(_: &T) -> &str {
 pub fn max<IterableType: Iterable>(
     _iterable: IterableType,
 ) -> Object {
-    Object::Int(Int::new(123))
+    Object::Int32(Int::<i32>::new(123))
 }
