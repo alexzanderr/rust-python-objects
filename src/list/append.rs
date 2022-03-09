@@ -1,6 +1,7 @@
 use crate::Object;
 use crate::Int;
 use crate::Float;
+use crate::_Object;
 use crate::_String;
 use crate::Char;
 use crate::Bool;
@@ -38,6 +39,38 @@ impl Append<i32> for List {
         self
     }
 }
+
+impl Append<i64> for List {
+    fn append_back(&mut self, _integer: i64) -> &mut Self {
+        self._list.push_back(Object::Int64(Int::new(_integer)));
+        self
+    }
+}
+
+
+impl Append<Int<i32>> for List {
+    fn append_back(&mut self, _integer: Int<i32>) -> &mut Self {
+        self._list.push_back(Object::Int32(_integer));
+        self
+    }
+}
+
+impl Append<Int<i64>> for List {
+    fn append_back(&mut self, _integer: Int<i64>) -> &mut Self {
+        self._list.push_back(Object::Int64(_integer));
+        self
+    }
+}
+
+
+// impl<T> Append<T> for List
+// where T: Sized {
+//     fn append_back(&mut self, _integer: i32) -> &mut Self {
+//         self._list.push_back(Object::Int32(Int::new(_integer)));
+//         self
+//     }
+// }
+
 
 impl Append<Float<f32>> for List {
     fn append_back(&mut self, _float: Float<f32>) -> &mut Self {
@@ -111,6 +144,13 @@ impl Append<Bool> for List {
 impl Append<List> for List {
     fn append_back(&mut self, _list: List) -> &mut Self {
         self._list.push_back(Object::List(_list));
+        self
+    }
+}
+
+impl Append<Object> for List {
+    fn append_back(&mut self, object: Object) -> &mut Self {
+        self._list.push_back(object);
         self
     }
 }

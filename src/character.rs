@@ -5,7 +5,11 @@ use std::fmt;
 use crate::_Object;
 
 
-#[derive(Copy, Clone)]
+#[derive(Copy)]
+#[derive(Clone)]
+#[derive(Eq)]
+#[derive(PartialEq)]
+#[derive(Hash)]
 /// Char struct that handles rust char
 pub struct Char {
     _char: char,
@@ -30,6 +34,14 @@ impl From<char> for Char {
     }
 }
 
+impl From<u8> for Char {
+    fn from(_int: u8) -> Self {
+        Char {
+            _char: _int as char,
+        }
+    }
+}
+
 impl Default for Char {
     fn default() -> Self {
         Char {
@@ -47,10 +59,6 @@ impl _Object for Char
     fn __repr__(&self) -> String {
         format!("'{}'", self._char)
     }
-
-    fn __len__(&self) -> usize {
-        8
-    }
 }
 
 impl fmt::Display for Char {
@@ -60,5 +68,21 @@ impl fmt::Display for Char {
         } else {
             write!(formatter, "{}", self._char)
         }
+    }
+}
+
+impl fmt::Debug for Char {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
+        if formatter.alternate() {
+            write!(formatter, "Char<'{}'>", self._char)
+        } else {
+            write!(formatter, "Char<{}>", self._char)
+        }
+    }
+}
+
+impl PartialEq<char> for Char {
+    fn eq(&self, other: &char) -> bool {
+        self._char == *other
     }
 }

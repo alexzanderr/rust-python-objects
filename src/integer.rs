@@ -3,16 +3,25 @@
 use std::fmt;
 use crate::_Object;
 use crate::type_of;
+use crate::_Hashable;
 
-/// Int struct, holds and _integer: i32
+
 #[derive(Copy)]
 #[derive(Clone)]
 #[derive(Default)]
+#[derive(Hash)]
+#[derive(Eq)]
+/// Int struct, holds and _integer: i32
 pub struct Int<T: Sized> {
     _integer: T,
 }
 
+impl<T> _Hashable for Int<T> {
 
+}
+
+
+/// Int::new(_anything_)
 impl<T> Int<T> where T: Sized
 {
     /// create a new Int object
@@ -25,36 +34,8 @@ impl<T> Int<T> where T: Sized
     }
 }
 
-/// this must be called like this
-///  Object::Int32(Int::<i32>::new(123))
-/// and its very ugly
-// impl Int<i32> {
-//     /// create a new Int object
-//     ///
-//     /// let integer = Int::new(123)
-//     pub fn new(_integer: i32) -> Self {
-//         Int {
-//             _integer,
-//         }
-//     }
-// }
 
-/// this must be called like this
-///  Object::Int64(Int::<i64>::new(123))
-/// and its very ugly
-// impl Int<i64> {
-//     /// create a new Int object
-//     ///
-//     /// let integer = Int::new(123)
-//     pub fn new(_integer: i64) -> Self {
-//         Int {
-//             _integer,
-//         }
-//     }
-// }
-
-
-
+/// Int::from(&str)
 impl From<&str> for Int<i32> {
     /// create new Int object from static str
     /// usage
@@ -71,6 +52,8 @@ impl From<&str> for Int<i32> {
     }
 }
 
+
+/// Int::from(&str)
 impl From<&str> for Int<i64> {
     /// create new Int object from static str
     /// usage
@@ -87,21 +70,6 @@ impl From<&str> for Int<i64> {
     }
 }
 
-// impl From<i32> for Int<i32> {
-//     fn from(_integer: i32) -> Self {
-//         Int {
-//             _integer
-//         }
-//     }
-// }
-
-// impl From<i64> for Int<i64> {
-//     fn from(_integer: i64) -> Self {
-//         Int {
-//             _integer
-//         }
-//     }
-// }
 
 impl<T> From<T> for Int<T>
 where T: Sized
@@ -117,6 +85,7 @@ where T: Sized
     }
 }
 
+/// object trait
 impl<T> _Object for Int<T>
 where T: Sized + fmt::Display
 {
@@ -124,15 +93,13 @@ where T: Sized + fmt::Display
         format!("{}", self._integer)
     }
 
-    fn __len__(&self) -> usize {
-        unimplemented!()
-    }
-
     fn __str__(&self) -> String {
         format!("{}", self._integer)
     }
 }
 
+
+/// display print
 impl<T> fmt::Display for Int<T>
 where T: Sized + fmt::Display
 {
@@ -141,6 +108,8 @@ where T: Sized + fmt::Display
     }
 }
 
+
+/// debug print
 impl<T> fmt::Debug for Int<T>
 where T: Sized + fmt::Debug + fmt::Display
 {
@@ -152,7 +121,8 @@ where T: Sized + fmt::Debug + fmt::Display
 
 
 
-
+/// equal and not-equal
+/// for all types of integer
 impl<T> PartialEq for Int<T>
 where T: Sized + PartialEq
 {

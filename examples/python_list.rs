@@ -113,6 +113,9 @@ fn main() {
     print(repr(&python_list));
     print(repr(&list_from_iterator));
 
+    python_list.extend(List::from("extended"));
+    print(&python_list);
+
     // let oo = Object::Int(Int::new(123));
     // println!("{}", oo);
 

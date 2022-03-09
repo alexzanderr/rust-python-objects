@@ -1,7 +1,7 @@
 #![doc = include_str!("../docs/python.md")]
 #![doc = include_str!("../docs/python_list/showcase.md")]
-#![deny(missing_docs)]
-#![deny(dead_code)]
+//#![deny(missing_docs)]
+//#![deny(dead_code)]
 #![allow(clippy::module_inception)]
 #![allow(clippy::useless_format)]
 
@@ -11,10 +11,7 @@ mod float;
 mod string;
 mod character;
 mod object;
-mod dict;
-mod builtins;
 mod boolean;
-mod list;
 mod iterable;
 
 
@@ -25,13 +22,13 @@ pub use character::Char;
 pub use object::Object;
 pub use object::_Object;
 pub use boolean::Bool;
-pub use dict::Dict;
 pub use iterable::Iterable;
 
 
 
 
 // builtins.rs
+mod builtins;
 // simple print
 pub use builtins::print;
 // print with debug
@@ -42,9 +39,23 @@ pub use builtins::repr;
 pub use builtins::type_of;
 pub use builtins::len;
 pub use builtins::_str;
-pub use builtins::max;
+//pub use builtins::max;
 
 
+// python list
+mod list;
 pub use list::List;
 pub use list::Append;
 pub use list::AppendFront;
+pub use list::Extend;
+
+
+// python dict
+mod dict;
+pub use dict::Dict;
+pub use dict::SetItem;
+
+
+// traits
+mod util_traits;
+pub use util_traits::_Hashable;

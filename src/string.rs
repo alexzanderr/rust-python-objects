@@ -5,6 +5,9 @@ use std::str::Chars;
 use crate::_Object;
 
 #[derive(Clone)]
+#[derive(Hash)]
+#[derive(Eq)]
+#[derive(PartialEq)]
 /// the struct that handles String and &str
 pub struct _String {
     /// the core field
@@ -65,10 +68,6 @@ impl Default for _String {
 }
 
 impl _Object for _String {
-    fn __len__(&self) -> usize {
-        self._string.len()
-    }
-
     fn __repr__(&self) -> String {
         format!("'{}'", self._string)
     }
@@ -81,6 +80,18 @@ impl _Object for _String {
 impl fmt::Display for _String {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "{}", self._string)
+    }
+}
+
+impl fmt::Debug for _String {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{:?}", self._string)
+    }
+}
+
+impl PartialEq<String> for _String {
+    fn eq(&self, other: &String) -> bool {
+        self._string == *other
     }
 }
 

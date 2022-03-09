@@ -1,3 +1,5 @@
+
+
 use std::fmt;
 use std::any::type_name;
 
@@ -25,7 +27,7 @@ pub fn dprint<T: fmt::Debug>(arg: T) {
 }
 
 /// len(object);
-pub fn len<T: _Object>(_object: &T) -> usize {
+pub fn len<T: Iterable>(_object: &T) -> usize {
     _object.__len__()
 }
 
@@ -48,9 +50,9 @@ pub fn type_of<T>(_: &T) -> &str {
     type_name::<T>()
 }
 
-/// the maximum from an iterable
-pub fn max<IterableType: Iterable>(
-    _iterable: IterableType,
-) -> Object {
-    Object::Int32(Int::<i32>::new(123))
-}
+// / the maximum from an iterable
+// pub fn max<T: Iterable>(
+//     _iterable: T,
+// ) -> Object {
+//     Object::Int32(Int::<i32>::new(123))
+// }

@@ -8,6 +8,7 @@ use unindent::{
     Unindent,
 };
 
+use std::hash::Hash;
 use crate::_Object;
 use crate::type_of;
 
@@ -68,10 +69,6 @@ where T: Sized + fmt::Display
         format!("{}", self._float)
     }
 
-    fn __len__(&self) -> usize {
-        unimplemented!()
-    }
-
     fn __str__(&self) -> String {
         format!("{}", self._float)
     }
@@ -124,19 +121,11 @@ where
     }
 }
 
-// impl fmt::Debug for Float<f64> {
-//     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-//         // https://doc.rust-lang.org/std/fmt/struct.Formatter.html#method.alternate
-//         let _type = "f64";
 
-//         if f.alternate() {
-//             let _fmt = format!("Float<{}> {{
-//                 _float: {}
-//             }}", _type, self._float);
-//             let _fmt = _fmt.unindent();
-//             write!(f,  "{}", _fmt)
-//         } else {
-//             write!(f, "Float<{}> {{ _float: {} }}", _type, self._float)
-//         }
-//     }
-// }
+impl<T> PartialEq<T> for Float<T>
+where T: Sized + std::cmp::PartialEq
+{
+    fn eq(&self, other: &T) -> bool {
+        self._float == *other
+    }
+}

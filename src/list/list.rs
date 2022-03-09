@@ -67,6 +67,12 @@ impl Iterable for List {
     }
 }
 
+// impl Iterable for &List {
+//     fn __len__(&self) -> usize {
+//         self._list.len()
+//     }
+// }
+
 
 // TODO implement PartialEq for List
 // impl PartialEq for List {
@@ -125,11 +131,8 @@ impl Default for List {
 }
 
 
-impl _Object for List {
-    fn __len__(&self) -> usize {
-        self._list.len()
-    }
 
+impl _Object for List {
     // >>>  x = ['hello', '1', '2', '3', '1', '2', '3', 123, 123, ['w', 'o', 'r', 'k', 'i', 'n', 'g'], 123.123, 123.123, 123.123, 'asdasd', ['s', 'o', 'm', 'e', 't', 'h', 'i', 'n',
     // ... 'g'], 'python string', True, False, False]
     // >>> x
@@ -242,7 +245,42 @@ impl fmt::Display for List {
     }
 }
 
-///
+impl fmt::Debug for List {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        // if list is empty then we print '[]'
+        if self._list.is_empty() {
+            write!(f, "[]");
+            return Ok(());
+        }
+
+
+        let zero = self._list.get(0).unwrap();
+        // print the first element of the list
+        match zero {
+            Object::String(obj) => write!(f, "[{:?}", obj.__repr__()),
+            Object::Char(obj) => write!(f, "[{:?}", obj.__repr__()),
+            _ => write!(f, "[{:?}", zero),
+        };
+
+        // print the other elements of the list but from index = 1
+        for _object in self._list.iter().skip(1) {
+            match _object {
+                Object::String(obj) => {
+                    write!(f, ", {}", obj.__repr__())
+                },
+                Object::Char(obj) => {
+                    write!(f, ", {}", obj.__repr__())
+                },
+                _ => write!(f, ", {}", _object),
+            };
+
+            // ostream.push_str(&_object.fmt(f).unwrap());
+        }
+        write!(f, "]")
+    }
+}
+
+
 impl Deref for List {
     type Target = VecDeque<Object>;
 

@@ -13,6 +13,7 @@
 use python::Int;
 use python::print;
 use python::printd;
+use std::collections::HashMap;
 
 fn main() {
     let int32: i32 = 123;
@@ -32,4 +33,10 @@ fn main() {
 
     print(int32);
     print(int64);
+
+    let mut dict = HashMap::new();
+    dict.insert(int32, int64);
+    println!("{:?}", dict);
+
+
 }
