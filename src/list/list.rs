@@ -21,7 +21,9 @@ use std::fmt;
 
 use std::error;
 
+use std::ops::Add;
 use std::ops::Deref;
+
 use std::str::FromStr;
 
 
@@ -391,5 +393,20 @@ impl FromIterator<String> for List {
             string_list.append_back(_string);
         }
         string_list
+    }
+}
+
+
+/// list concatenation
+impl Add for List {
+    type Output = List;
+
+    /// list1 + list2 == list3
+    fn add(self, rhs: Self) -> Self::Output {
+        let mut new_list = List::from(self);
+        for _object in rhs._list {
+            new_list.append_back(_object);
+        }
+        new_list
     }
 }

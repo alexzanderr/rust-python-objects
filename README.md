@@ -39,15 +39,7 @@ first you need to see the showcases to convince you to install it.
 2. [`python-dict`] -> incoming
 
 # Install
-`1. the old way`
-
-just copy the crate name and the version you want to use:
-```toml
-python-objects = "0.0.5"
-```
-to your `Cargo.toml` and then write some code and build it.
-
-`2. the modern and simple way`
+### 1. the modern and simple way
 
 just run this command
 ```shell
@@ -58,6 +50,16 @@ and this will add the `latest version` from `crates.io` to your `Cargo.toml`, ju
 - what is `cargo add` ? -> its a cargo sub command
 - how to install it ? -> `cargo install cargo-edit`
 - what is [`cargo-edit`](https://github.com/killercup/cargo-edit) ? -> its a rust package that adds useful sub commands for cargo that are not `built-in`
+
+### 2. the old way
+
+just copy the `crate name` and the version you want to use:
+```toml
+python-objects = "$the_version_you_want"
+# example
+python-objects = "0.0.6"
+```
+to your `Cargo.toml` and then write some code and build your project that uses `python-objects`.
 
 # Documentation
 - [`docs.rs/python-objects`](https://docs.rs/python-objects/latest/python/)
