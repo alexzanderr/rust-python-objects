@@ -35,6 +35,7 @@ be happy.
 first you need to see the showcases to convince you to install it.
 
 1. [`python-list`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list/showcase.md)
+    - [`extend method`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list/extend.md)
 2. [`python-dict`] -> incoming
 
 # Install
