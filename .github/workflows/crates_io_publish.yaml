@@ -24,8 +24,6 @@ jobs:
           toolchain: nightly
           override: true
 
-      # generate documentation
-      - run: cargo doc --document-private-items
       # publish
       - run: cargo publish --token ${RUST_PYTHON_OBJECTS_TOKEN}
         env:
