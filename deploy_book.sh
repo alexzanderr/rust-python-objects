@@ -4,6 +4,8 @@ git checkout gh-pages
 
 git checkout main "book/src/*" "book/book.toml"
 
+rm -rf src
+
 mv ./book/book.toml ./book/src .
 
 rm -rf book
