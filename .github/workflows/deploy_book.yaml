@@ -31,5 +31,4 @@ jobs:
         git config --global user.email ""
         git add .
         git commit -m "rust book built ($GITHUB_SHA) automatically and deployed to gh-pages"
-        git push github gh-pages
-        echo -e "\n\ndeployed book with code=0"
+        git push
