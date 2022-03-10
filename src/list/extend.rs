@@ -5,7 +5,7 @@ use crate::{_Object, Append, Int};
 /// extend the current list with anything
 pub trait Extend<T>: Sized + _Object {
 
-    #[doc = include_str!("../../docs/python_list/extend.md")]
+    #[doc = include_str!("../../docs/python_list/methods/extend.md")]
     fn extend(&mut self, _: T) -> &mut Self;
 }
 

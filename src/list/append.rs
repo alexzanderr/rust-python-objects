@@ -62,6 +62,15 @@ impl Append<Int<i64>> for List {
     }
 }
 
+// impl Append<Vec<i32>> for List {
+//     fn append_back(&mut self, _int_vec: Vec<i32>) -> &mut Self {
+//         for _int in _int_vec {
+//             self._list.push_back(Object::Int32(Int::from(_int)));
+//         }
+//         self
+//     }
+// }
+
 
 // impl<T> Append<T> for List
 // where T: Sized {
@@ -85,6 +94,14 @@ impl Append<Float<f64>> for List {
         self
     }
 }
+
+impl Append<f64> for List {
+    fn append_back(&mut self, _float: f64) -> &mut Self {
+        self._list.push_back(Object::Float64(Float::new(_float)));
+        self
+    }
+}
+
 
 
 impl Append<&str> for List {

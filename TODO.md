@@ -14,8 +14,8 @@ great todos for improvement
 - [x] remove the `__len__()` from `_Object` trait and from all its implementations
 - [x] implement Hash for every type (that can be a dict key): `_String`, `Bool`, `Int`, `Char`, `Tuple`, `rust tuple`, `Float`; you cant implement hash for float, f32/f64 doesnt implement Hash trait
 - [x] add `extend` method to `List`
-- [ ]
-- [ ]
+- [ ] consider renaming `__str__` and `__repr__` to `__display__` and `__debug__` to be more rusty, yeah but its not going to be pythonic ..
+- [ ] create a build system for docs
 - [ ]
 - [ ]
 - [ ]
