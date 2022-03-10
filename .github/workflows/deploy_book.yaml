@@ -27,6 +27,8 @@ jobs:
         mv ./book/book.toml ./book/src .
         rm -rf book
         mdbook build
+        git config --global user.name "Deploy Book CI"
+        git config --global user.email ""
         git add .
         git commit -m "rust book built ($GITHUB_SHA) automatically and deployed to gh-pages"
         git push github gh-pages
