@@ -23,9 +23,9 @@ jobs:
       run: |
         git checkout gh-pages
         git checkout main "book/src/*" "book/book.toml"
-        rm -rf src
-        mv ./book/book.toml ./book/src .
-        rm -rf book
+        rm -rfv src
+        mv -v ./book/book.toml ./book/src .
+        rm -rfv book
         mdbook build
         git config --global user.name "Deploy Book CI"
         git config --global user.email ""
