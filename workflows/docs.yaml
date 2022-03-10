@@ -4,6 +4,7 @@ on:
     branches:
       - master
 
+# https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-system-path
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,7 +15,7 @@ jobs:
     - name: Install mdbook
       run: |
         mkdir mdbook
-        curl -Lf https://github.com/rust-lang/mdBook/releases/download/v0.4.11/mdbook-v0.4.11-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook
+        curl -Lf https://github.com/rust-lang/mdBook/releases/download/v0.4.15/mdbook-v0.4.15-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook
         echo `pwd`/mdbook >> $GITHUB_PATH
     - name: Deploy docs
       run: |
