@@ -41,8 +41,10 @@ be happy.
 first you need to see the showcases to convince you to install it.
 
 1. [`python-list`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list/showcase.md)
-    - [`extend method`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list/extend.md)
+    - [`extend method`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list/methods/extend.md)
+    - [`append_back method`](https://github.com/alexzanderr/rust-python-objects/blob/main/docs/python_list/methods/append.md)
 2. [`python-dict`] -> incoming
+
 
 # Install
 ### 1. the modern and simple way
@@ -67,9 +69,11 @@ python-objects = "0.0.6"
 ```
 to your `Cargo.toml` and then write some code and build your project that uses `python-objects`.
 
+
 # Documentation
 - [`docs.rs/python-objects`](https://docs.rs/python-objects/latest/python/)
 - [`the-book`](https://alexzanderr.github.io/rust-python-objects/index.html)
+
 
 # why ?
 why not. because python concepts are very cool, but python is slow..

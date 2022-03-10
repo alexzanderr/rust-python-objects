@@ -14,7 +14,7 @@ jobs:
         mkdir mdbook
         curl -Lf https://github.com/rust-lang/mdBook/releases/download/v0.4.15/mdbook-v0.4.15-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook
         echo `pwd`/mdbook >> $GITHUB_PATH
-        
+
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
@@ -23,10 +23,10 @@ jobs:
     - name: deploy book
       run: |
         git checkout gh-pages
-        git checkout main "book/src/*" "book/book.toml"
-        rm -rfv src
-        mv -v ./book/book.toml ./book/src .
         rm -rfv book
+        rm -rfv src
+        git checkout main "book/src/*" "book/book.toml"
+        mv -vf ./book/book.toml ./book/src .
         mdbook build
         git config --global user.name "Deploy Book CI"
         git config --global user.email ""
