@@ -18,4 +18,4 @@ git commit -m "rust book built automatically"
 
 git push github gh-pages
 
-echo "deployed book with code=0"
+echo -e "\n\ndeployed book with code=0"
