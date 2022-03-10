@@ -1,14 +1,10 @@
-
-
 use std::fmt;
 use std::any::type_name;
 
 
 // use crate::Object;
 use crate::_Object;
-use crate::Object;
 use crate::Iterable;
-use crate::Int;
 
 /// print(object);
 pub fn print<T: fmt::Display>(arg: T) {

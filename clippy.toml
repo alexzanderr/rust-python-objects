@@ -1,0 +1,5 @@
+
+# [build]
+# useless_format = "allow"
+# module_inception = "allow"
+# derive_hash_xor_e = "allow"

@@ -1,5 +1,3 @@
-
-
 #![allow(unused_imports)]
 
 use python::*;
@@ -16,7 +14,6 @@ fn main() {
     list.append_back(123);
     list.append_back(123.123f32);
     list.append_back(123.123f64);
-
 
 
     print(list);

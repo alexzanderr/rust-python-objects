@@ -133,7 +133,6 @@ impl Default for List {
 }
 
 
-
 impl _Object for List {
     // >>>  x = ['hello', '1', '2', '3', '1', '2', '3', 123, 123, ['w', 'o', 'r', 'k', 'i', 'n', 'g'], 123.123, 123.123, 123.123, 'asdasd', ['s', 'o', 'm', 'e', 't', 'h', 'i', 'n',
     // ... 'g'], 'python string', True, False, False]
@@ -340,7 +339,8 @@ impl From<i32> for List {
     #[doc = include_str!("../../docs/python_list/showcase.md")]
     fn from(_integer: i32) -> List {
         let mut vector_deque = VecDeque::new();
-        vector_deque.push_back(Object::Int32(Int::<i32>::new(_integer)));
+        vector_deque
+            .push_back(Object::Int32(Int::<i32>::new(_integer)));
         List {
             _list: vector_deque,
         }
@@ -403,7 +403,10 @@ impl Add for List {
 
     /// list1 + list2 == list3
     fn add(self, rhs: Self) -> Self::Output {
-        let mut new_list = List::from(self);
+        let mut new_list = List::new();
+        for _object in self._list {
+            new_list.append_back(_object);
+        }
         for _object in rhs._list {
             new_list.append_back(_object);
         }

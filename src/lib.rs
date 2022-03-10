@@ -4,6 +4,7 @@
 //#![deny(dead_code)]
 #![allow(clippy::module_inception)]
 #![allow(clippy::useless_format)]
+#![allow(clippy::derive_hash_xor_eq)]
 
 
 mod integer;
@@ -25,8 +26,6 @@ pub use boolean::Bool;
 pub use iterable::Iterable;
 
 
-
-
 // builtins.rs
 mod builtins;
 // simple print
@@ -39,7 +38,7 @@ pub use builtins::repr;
 pub use builtins::type_of;
 pub use builtins::len;
 pub use builtins::_str;
-//pub use builtins::max;
+// pub use builtins::max;
 
 
 // python list

@@ -1,4 +1,3 @@
-
 use std::fmt;
 
 
@@ -50,8 +49,7 @@ impl Default for Char {
     }
 }
 
-impl _Object for Char
-{
+impl _Object for Char {
     fn __str__(&self) -> String {
         String::from(self._char)
     }

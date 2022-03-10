@@ -1,4 +1,3 @@
-
 #![allow(
     dead_code,
     unused_imports,
@@ -7,7 +6,7 @@
     unused_assignments,
     unused_mut,
     non_snake_case,
-    unused_must_use,
+    unused_must_use
 )]
 
 use pretty_assertions::assert_eq;
@@ -104,4 +103,3 @@ fn test_str() {
 
     assert_eq!(result, "['rust', 'is', 'great']");
 }
-

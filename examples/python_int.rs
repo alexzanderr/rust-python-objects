@@ -1,4 +1,3 @@
-
 #![allow(
     dead_code,
     unused_imports,
@@ -7,7 +6,7 @@
     unused_assignments,
     unused_mut,
     non_snake_case,
-    unused_must_use,
+    unused_must_use
 )]
 
 use python::Int;
@@ -37,6 +36,4 @@ fn main() {
     let mut dict = HashMap::new();
     dict.insert(int32, int64);
     println!("{:?}", dict);
-
-
 }

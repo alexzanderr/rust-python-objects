@@ -19,7 +19,8 @@ pub trait AppendFront<T>: Sized {
 
 impl AppendFront<i32> for List {
     fn append_front(&mut self, _integer: i32) -> &mut Self {
-        self._list.push_front(Object::Int32(Int::<i32>::new(_integer)));
+        self._list
+            .push_front(Object::Int32(Int::<i32>::new(_integer)));
         self
     }
 }

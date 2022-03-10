@@ -1,4 +1,3 @@
-
 mod hashable_object;
 pub use hashable_object::Hashable;
 

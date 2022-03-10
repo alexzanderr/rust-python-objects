@@ -1,7 +1,7 @@
 use crate::Object;
 use crate::Int;
 use crate::Float;
-use crate::_Object;
+// use crate::_Object;
 use crate::_String;
 use crate::Char;
 use crate::Bool;
@@ -103,11 +103,9 @@ impl Append<f64> for List {
 }
 
 
-
 impl Append<&str> for List {
     fn append_back(&mut self, _str: &str) -> &mut Self {
-        self._list
-            .push_back(Object::String(_String::from(_str)));
+        self._list.push_back(Object::String(_String::from(_str)));
         self
     }
 }

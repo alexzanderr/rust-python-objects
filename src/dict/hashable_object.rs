@@ -1,4 +1,4 @@
-
+#![allow(dead_code)]
 
 use std::fmt;
 use std::hash::Hash;
@@ -11,8 +11,8 @@ use crate::Bool;
 /// supreme enum
 #[derive(Eq, Hash, PartialEq)]
 pub enum Hashable<T>
-where T: Sized + Eq + Hash + PartialEq
-{
+where
+    T: Sized + Eq + Hash + PartialEq, {
     /// char object
     Char(Char),
     /// int32 object
@@ -25,7 +25,8 @@ where T: Sized + Eq + Hash + PartialEq
 
 
 impl<T> fmt::Display for Hashable<T>
-where T: Sized + fmt::Display + Eq + Hash + PartialEq
+where
+    T: Sized + fmt::Display + Eq + Hash + PartialEq,
 {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         // why there is &* ?
@@ -40,7 +41,8 @@ where T: Sized + fmt::Display + Eq + Hash + PartialEq
 }
 
 impl<T> fmt::Debug for Hashable<T>
-where T: Sized + fmt::Display + fmt::Debug + Eq + Hash + PartialEq
+where
+    T: Sized + fmt::Display + fmt::Debug + Eq + Hash + PartialEq,
 {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         // why there is &* ?

@@ -1,6 +1,1 @@
-
-
-
-pub trait _Hashable {
-    
-}
+pub trait _Hashable {}

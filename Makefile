@@ -35,7 +35,7 @@ p:
 	cargo build --release
  	# cargo run --release
 	cargo doc --document-private-items
-	cargo test
+	cargo test -j 8 -- --show-output
 	cargo clippy -- -D warnings
 	cargo fmt --all -- --check
 	cargo publish
@@ -58,8 +58,9 @@ format:
 
 
 cti:
-	cargo build
-	cargo test
+# 	cargo build
+# dont need build before test, because test will automatically build
+	cargo test -j 8 -- --show-output
 	cargo doc --document-private-items
 	cargo clippy -- -D warnings
 	cargo fmt

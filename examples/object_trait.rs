@@ -1,10 +1,6 @@
-
-
 use std::collections::VecDeque;
 use std::fmt;
 use std::any::type_name;
-
-
 
 
 /// get the type of an object
@@ -21,8 +17,7 @@ trait _Object {
     fn __str__(&self) -> String;
 }
 
-trait Append<T>: Sized
-{
+trait Append<T>: Sized {
     fn append_back(&mut self, _: T) -> &mut Self;
 }
 
@@ -36,19 +31,21 @@ pub struct Float<T: Sized> {
 
 
 impl<T> Float<T>
-where T: Sized
+where
+    T: Sized,
 {
     /// constructor
     /// creates a Float object from any float (f32, f64)
     pub fn new(_float: T) -> Self {
         Float {
-            _float
+            _float,
         }
     }
 }
 
 impl<T> From<T> for Float<T>
-where T: Sized
+where
+    T: Sized,
 {
     fn from(_float: T) -> Self {
         Float {
@@ -58,9 +55,9 @@ where T: Sized
 }
 
 
-
 impl<T> _Object for Float<T>
-where T: Sized + fmt::Display
+where
+    T: Sized + fmt::Display,
 {
     #[inline]
     fn __len__(&self) -> usize {
@@ -73,10 +70,9 @@ where T: Sized + fmt::Display
 }
 
 
-
-
 impl<T> fmt::Display for Float<T>
-where T: Sized + fmt::Display
+where
+    T: Sized + fmt::Display,
 {
     fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
         let _type = type_of(&self._float);
@@ -89,26 +85,28 @@ where T: Sized + fmt::Display
 }
 
 struct List<T>
-where T: _Object
-{
+where
+    T: _Object, {
     /// _list which holds all the python objects together
     pub _list: VecDeque<T>,
 }
 
 impl<T> List<T>
-where T: _Object
+where
+    T: _Object,
 {
     pub fn new() -> Self {
         let _list = VecDeque::new();
         List {
-            _list
+            _list,
         }
     }
 }
 
 
 impl<T> _Object for List<T>
-where T: _Object + fmt::Display
+where
+    T: _Object + fmt::Display,
 {
     #[inline]
     fn __len__(&self) -> usize {
@@ -121,14 +119,14 @@ where T: _Object + fmt::Display
 }
 
 impl<T> Append<T> for List<T>
-where T: _Object
+where
+    T: _Object,
 {
     fn append_back(&mut self, _object: T) -> &mut Self {
         self._list.push_back(_object);
         self
     }
 }
-
 
 
 /// print(object);

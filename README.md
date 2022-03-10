@@ -2,6 +2,12 @@
 ![logo](https://github.com/alexzanderr/rust-python-objects/blob/main/static/img/logo/rust-python-objects-logo.png?raw=True)
 
 <p align="center">
+    <a href="https://alexzanderr.github.io/rust-python-objects/book/index.html">
+        <img src="https://github.com/alexzanderr/rust-python-objects/actions/workflows/deploy_book.yaml/badge.svg" alt="book_deploy">
+    </a>
+    <a href="https://crates.io/crates/python-objects">
+        <img src="https://github.com/alexzanderr/rust-python-objects/actions/workflows/crates_io_publish.yaml/badge.svg" alt="crates_io_publish">
+    </a>
     <a href="https://crates.io/crates/python-objects">
         <img src="https://img.shields.io/crates/v/python-objects.svg" alt="Crates.io">
     </a>

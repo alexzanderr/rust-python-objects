@@ -1,7 +1,3 @@
-
-
-
-
 use std::collections::HashMap;
 use std::fmt;
 
@@ -11,8 +7,8 @@ use crate::Int;
 use crate::_String;
 // use crate::Char;
 use crate::Object;
-use crate::_Object;
-use crate::_Hashable;
+// use crate::_Object;
+// use crate::_Hashable;
 use super::Hashable;
 use super::SetItem;
 use std::hash::Hash;
@@ -27,7 +23,8 @@ pub struct Dict<T: Sized + Eq + Hash + PartialEq> {
 }
 
 impl<T> Dict<T>
-where T: Sized + Eq + Hash + PartialEq
+where
+    T: Sized + Eq + Hash + PartialEq,
 {
     /// creates a new empty python dict
     pub fn new() -> Dict<T> {
@@ -46,7 +43,8 @@ where T: Sized + Eq + Hash + PartialEq
 // }
 
 impl<T> SetItem<Int<T>, _String> for Dict<T>
-where T: Sized + Eq + Hash + PartialEq
+where
+    T: Sized + Eq + Hash + PartialEq,
 {
     fn set(&mut self, key: Int<T>, value: _String) {
         self._dict.insert(Hashable::Int(key), Object::String(value));
@@ -61,8 +59,11 @@ where T: Sized + Eq + Hash + PartialEq
 //     }
 // }
 
+#[allow(unused_must_use)]
+
 impl<T> fmt::Display for Dict<T>
-where T: Sized + fmt::Display + Eq + Hash + PartialEq
+where
+    T: Sized + fmt::Display + Eq + Hash + PartialEq,
 {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         writeln!(f, "{{");
@@ -74,4 +75,11 @@ where T: Sized + fmt::Display + Eq + Hash + PartialEq
 }
 
 
-
+impl<T> Default for Dict<T>
+where
+    T: Sized + Eq + Hash + PartialEq,
+{
+    fn default() -> Self {
+        Self::new()
+    }
+}

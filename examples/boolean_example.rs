@@ -1,5 +1,3 @@
-
-
 use python::*;
 use pretty_assertions::assert_eq;
 use pretty_assertions::assert_ne;

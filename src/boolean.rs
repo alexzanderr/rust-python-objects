@@ -1,4 +1,3 @@
-
 use std::fmt;
 
 use crate::_Object;
@@ -42,7 +41,7 @@ impl From<i32> for Bool {
         if _int > 0 {
             return Bool {
                 _bool: true
-            }
+            };
         }
         Bool {
             _bool: false
@@ -78,7 +77,6 @@ impl fmt::Debug for Bool {
         write!(f, "Bool<{}>", self.__str__())
     }
 }
-
 
 
 impl PartialEq<bool> for Bool {
